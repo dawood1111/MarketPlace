@@ -30,18 +30,7 @@ namespace api.Controller
            }
             return Ok(id11) ;
         }
-        [HttpPost]
-        [Authorize]
-        public async Task<IActionResult> Create(){
-            var getName=User.GetUserName();
-            var FindEmail0=await _user.FindByNameAsync(getName);
-           var cart=new Cart{
-             UserId=FindEmail0.Id
-           };
-            await _context.Carts.AddAsync(cart);
-           await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetId),cart);
-        }
+       
        
         
       

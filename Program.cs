@@ -1,3 +1,4 @@
+using api.Admin;
 using api.Data;
 using api.Interface;
 using api.Model;
@@ -91,6 +92,7 @@ IssuerSigningKey=new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(bui
 builder.Services.AddScoped<ITokenService,TokenServices>();
 builder.Services.AddScoped<ICartItem,CartItemRepos>();
 builder.Services.AddScoped<ICart,CartRepo>();
+builder.Services.AddScoped<IAdmin,AdminUser>();
 
 
 builder.Services.AddCors(options =>

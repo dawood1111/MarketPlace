@@ -49,8 +49,12 @@ public async Task<IActionResult> Register([FromBody] RegisterDto registerDto)
     var addToRoleResult = await _Users.AddToRoleAsync(user, "User");
     if (addToRoleResult.Succeeded)
     {
-      
-       
+        var cart =new Cart{
+            UserId=user.Id
+        };
+        await _context.Carts.AddAsync(cart);
+        await _context.SaveChangesAsync();
+
        return Ok(_TokenServices.CreateToken(user));
     }else{
         return StatusCode(500, addToRoleResult.Errors);

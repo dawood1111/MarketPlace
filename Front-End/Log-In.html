@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        
+<form action="" class="LogIn-Form">
+<input type="email" class="Email">
+<input type="password" class="Password">
+<button class="Submit">submit</button>
+</form>
+
+
+ <script>
+
+
+document.querySelector(".LogIn-Form").addEventListener("submit",async (e)=>{
+
+    e.preventDefault();
+
+    const Email=document.querySelector('.Email').value;
+    const Password=document.querySelector('.Password').value;
+
+
+    const user={
+        Email:Email,
+        Password:Password
+    }
+
+const url="http://localhost:5296/User/Login";
+const response= await fetch(url,{
+    method:"POST",
+    headers: {
+    'Content-Type': 'application/json'
+         },
+     body: JSON.stringify(user)
+})
+const data=await response.json();
+localStorage.setItem("token",data.token);
+localStorage.setItem("role",data.role);
+
+if (!response.ok) {
+    throw new Error("Login failed. Please check your credentials.");
+}
+
+if(data.role=="Admin"){
+    window.location.href="http://127.0.0.1:5500/api/Front-End/AdmimPage.html"
+}else if(data.role=="User"){
+    window.location.href="http://127.0.0.1:5500/api/Front-End/MainPage.html"
+}else{
+throw new Error("Unknown Role")
+}
+
+})
+   
+
+
+
+        </script>
+    </body>
+</html>
