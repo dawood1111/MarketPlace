@@ -31,17 +31,21 @@ namespace api.Controller
             return Ok(await _cartItem.GetIdAsync(id)) ;
         }
          [HttpPost("AddCartItem")]
-         public async Task<IActionResult> Create([FromBody] CartItemDto cartItemDto,int ProductId){
+         public async Task<IActionResult> Create([FromBody] CartItemDto cartItemDto,String ProductName){
              var user=User.GetEmail();
           var FindEmail=  await _user.FindByEmailAsync(user);
           if(FindEmail==null){ return NotFound("email not found");} 
 
-            var FindProductId=await _context.Products.FirstOrDefaultAsync(p=>p.Id==ProductId);
-            if(FindProductId==null)return NotFound("product not found");
+            var FindProductName=await _context.Products.FirstOrDefaultAsync(p=>p.Name==ProductName);
+            if(FindProductName==null)return NotFound("product not found");
           var cart = await _context.Carts
         .FirstOrDefaultAsync(c => c.UserId == FindEmail.Id);
+              decimal price=FindProductName.Price;
+              var ProductId=FindProductName.Id;
+              
+              
 
-            var CartItemModel=cartItemDto.ToCartItem(ProductId);
+            var CartItemModel=cartItemDto.ToCartItem(price,ProductId);
              CartItemModel.CartId=cart.Id;
         
             await _cartItem.CareteCartItem(CartItemModel);

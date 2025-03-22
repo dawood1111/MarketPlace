@@ -35,12 +35,13 @@ public async Task<IActionResult> Register([FromBody] RegisterDto registerDto)
     {
         return BadRequest(ModelState);
     }
-
+       String Role="User";
     // Create the user
     var user = new User
     {
         UserName = registerDto.UserName,
-        Email = registerDto.Email
+        Email = registerDto.Email,
+        Role=Role
     };
 
     // Save the user to the database
