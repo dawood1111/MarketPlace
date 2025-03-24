@@ -32,7 +32,7 @@ namespace api.Controller
             return Ok(id11) ;
         }
         [HttpGet("GetAll")]
-        public async Task<IActionResult> GetAll(){
+        public async Task<IActionResult> GetAll(){       
                 var GetEmail=User.GetEmail();
                 var FindByEmail=await _user.FindByEmailAsync(GetEmail);
                 var GetAll=await _context.Carts.Include(c=>c.cartitem).Where(c=>c.UserId==FindByEmail.Id).ToListAsync();
