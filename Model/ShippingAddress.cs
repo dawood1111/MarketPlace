@@ -5,7 +5,6 @@ namespace api.Model
     public class ShippingAddress
     {
         public int Id { get; set; }
-       
         public String City { get; set; }
         public String Country { get; set; }
         public String StreetAddress { get; set; }
