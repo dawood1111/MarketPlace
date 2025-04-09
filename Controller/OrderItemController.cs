@@ -41,6 +41,7 @@ namespace api.Controller
               shippingAddress=FindshippingAddress,
               OrderStatus="Pending",
               TotalPrice=0
+       
               
             };
             await _context.Orders.AddAsync(order);
@@ -49,11 +50,13 @@ namespace api.Controller
             
            
          
+
             foreach(var CartItem in Cart.SelectMany(c=>c.cartitem)){
                 var orderItem=new OrderItems{
             
                 OrderId=FindOrder.Id,
                 ProductName=CartItem.ProductName,
+
                 Quantity=CartItem.Quantity,
                 Price=CartItem.Price,
                 TotalPrice=CartItem.Price*CartItem.Quantity
@@ -67,6 +70,14 @@ namespace api.Controller
                 }
 
               
+
+               
+               
+               
+                };
+              
+          
+
                 
 
                 await _context.OrderItem.AddAsync(orderItem);
@@ -74,6 +85,7 @@ namespace api.Controller
             await _context.SaveChangesAsync();
              
             
+
 
             
 
