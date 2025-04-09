@@ -52,12 +52,12 @@ namespace api.Controller
 
         [HttpPut("UpdateProduct")]
         [Authorize(Roles ="Admin")]
-        public async Task<IActionResult>Update(String Name,[FromBody] ProductDto productDto,String CategoryName){
+        public async Task<IActionResult>Update(String Name,[FromBody] ProductDto productDto){
             var FindProductName= await _context.Products.FirstOrDefaultAsync(p=>p.Name==Name);
-            var FindCategoryName=await _context.Categories.FirstOrDefaultAsync(n=>n.Name==CategoryName);
+          
             FindProductName.Name=productDto.Name;
             FindProductName.Price=productDto.Price;  
-            FindProductName.Category_Id=FindCategoryName.Id;
+          
             FindProductName.Description=productDto.Description;
             await _context.SaveChangesAsync();
             return Ok(FindProductName);
@@ -74,11 +74,15 @@ namespace api.Controller
 
         }
 
+
+
           [HttpGet("GetAllOrders")]
         [Authorize(Roles ="Admin")]
         public async Task<IActionResult> GetAllOrders(){
             return Ok(await _context.Orders.Include(o=>o.orderItems).Include(s=>s.shippingAddress).ToListAsync());
         }
+
+
           [HttpPost("AddCategory")]
         [Authorize(Roles ="Admin")]
         public async Task<IActionResult> AddCategory(String CategoryName){
@@ -91,6 +95,12 @@ namespace api.Controller
             await _context.SaveChangesAsync();
             return Ok(new{Message="Created Successfully"});
 
+        }
+
+        [HttpGet("GetOrderItems")]
+        [Authorize(Roles ="Admin")]
+        public async Task<IActionResult> GetOrderItems(){
+            return Ok(await _context.OrderItem.ToListAsync());
         }
 
     }

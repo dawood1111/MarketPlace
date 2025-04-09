@@ -37,15 +37,20 @@ namespace api.Controller
           if(FindEmail==null){ return NotFound("email not found");} 
 
             var FindProductName=await _context.Products.FirstOrDefaultAsync(p=>p.Name==ProductName);
+
             if(FindProductName==null)return NotFound("product not found");
+
           var cart = await _context.Carts
         .FirstOrDefaultAsync(c => c.UserId == FindEmail.Id);
               decimal price=FindProductName.Price;
-              var ProductId=FindProductName.Id;
+              int ProductId=FindProductName.Id;
+
+              
+              
               
               
 
-            var CartItemModel=cartItemDto.ToCartItem(price,ProductId);
+            var CartItemModel=cartItemDto.ToCartItem(price,ProductId,FindProductName.Name,FindEmail.Id);
              CartItemModel.CartId=cart.Id;
         
             await _cartItem.CareteCartItem(CartItemModel);

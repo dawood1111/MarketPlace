@@ -39,7 +39,8 @@ namespace api.Controller
              UserId=FindEmail.Id,
               OrderDate=DateTime.Now,
               shippingAddress=FindshippingAddress,
-              OrderStatus="Pending"
+              OrderStatus="Pending",
+              TotalPrice=0
               
             };
             await _context.Orders.AddAsync(order);
@@ -48,19 +49,24 @@ namespace api.Controller
             
            
          
-         decimal TotalPrice=0;
             foreach(var CartItem in Cart.SelectMany(c=>c.cartitem)){
                 var orderItem=new OrderItems{
             
                 OrderId=FindOrder.Id,
                 ProductName=CartItem.ProductName,
-               
                 Quantity=CartItem.Quantity,
-                Price=CartItem.Price
-               
+                Price=CartItem.Price,
+                TotalPrice=CartItem.Price*CartItem.Quantity
+                
+
                 };
+                FindOrder.TotalPrice+=orderItem.TotalPrice;
               
-                TotalPrice+=CartItem.Price*CartItem.Quantity;
+                {
+                    
+                }
+
+              
                 
 
                 await _context.OrderItem.AddAsync(orderItem);
@@ -69,7 +75,6 @@ namespace api.Controller
              
             
 
-             FindOrder.TotalPrice=TotalPrice;
             
 
             return Ok(new{message="created succesfully"});

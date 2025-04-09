@@ -1,20 +1,3 @@
-<!DOCTYPE html>
-<html>
-    <head>
-
-    </head>
-    <body>
-        
-<form action="" class="LogIn-Form">
-<input type="email" class="Email">
-<input type="password" class="Password">
-<button class="Submit">submit</button>
-</form>
-
-
- <script>
-
-
 document.querySelector(".LogIn-Form").addEventListener("submit",async (e)=>{
 
     e.preventDefault();
@@ -46,21 +29,19 @@ const role=decodedToken.role;
 localStorage.setItem("token",token);
 localStorage.setItem("role",role);
 if(role==="Admin"){
-    window.location.href="http://127.0.0.1:5500/api/Front-End/AdmimPage.html"
+    window.location.href="http://127.0.0.1:5500/api/Front-End/AdminPage/AdmimPage.html"
 }else if(role==="User"){
     window.location.href="http://127.0.0.1:5500/api/Front-End/MainPage.html"
 }else{
 throw new Error("Unknown Role")
 }
  
-}
+}else{
+        console.log("Email or/and password wrong")
+    }
 
 
 })
    
 
 
-
-        </script>
-    </body>
-</html>

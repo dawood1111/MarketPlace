@@ -163,3 +163,17 @@ margin-right: 10px;
     border-radius:10px ;
     background-color: #F2F2F2;
 }
+
+.Authentication-Button{
+    display: flex;
+    justify-content: space-between;
+    width: 220px;
+}
+.Authentication-Button button{
+background-color: white;
+border:solid 1.5px black;
+width: 100px;
+padding-top: 6px;
+padding-bottom: 6px;
+border-radius: 4px;
+}
