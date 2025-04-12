@@ -42,6 +42,10 @@ throw new Error("Unknown Role")
 
 
 })
+
+function RegisterNavigator(){
+    window.location.href='http://127.0.0.1:5500/api/Front-End/AuthenticationInterface/Register/Register.html'
+}
    
 
 

@@ -109,17 +109,21 @@
                             <legend>Add</legend>
                             <div class="AddContainer">
                                 <div class="addContainer">
-                                    <input type="text" placeholder="Enetr Name......">
-                                    <input type="number" style="display: inline;" placeholder="Enetr Price....">
-                                    <input type="text" placeholder="Enetr Description.....">
-                                    <select name="" id="" >
-                                        <option value="1">Food</option>
-                                        <option value="2">Clean</option>
-                                        <option value="3">Vegtables</option>
+                                    <input type="text" placeholder="Enetr Name......" class="Name">
+                                    <input type="number" style="display: inline;" placeholder="Enetr Price...." class="Price">
+                                    <input type="text" placeholder="Enetr Description....." class="Description">
+                                    <input type="file" class="Image">
+                                    
+                                    <select name="" id="" class="category">
+                                        <option value="Food">Food</option>
+                                        <option value="Clean">Clean</option>
+                                        <option value="Vegtables">Vegtables</option>
                                     </select><br>
+                                   
+                                    <button type="button"  onclick="ProductManagement('Add',event)">Submit</button>
                                 </div>
+                                  
                                 
-                                <button>Submit</button>
                             </div>
                         </fieldset>
                     </form>
@@ -129,13 +133,14 @@
                             <legend>Update</legend>
                             <div class="UpdateContainer">
                                 <div class="updateContainer">
-                                <input type="text" placeholder="Enetr Product Name.....">
-                                <input type="text" placeholder="Enter New Name....">
-                                <input type="number" placeholder="Enter New Price">
-                               
-                                <input type="text" placeholder=" Enetr New Description....."><br>
+                                <input type="text" placeholder="Enetr Product Name....." class="productName">
+                                <input type="text" placeholder="Enter New Name...." class="newProduct">
+                                <input type="number" placeholder="Enter New Price"
+                                class="newPrice">
+                                <input type="text" placeholder=" Enetr New Description....." class="newDescription"><br>
+                                <button type="button" onclick="ProductManagement('Update',event)">Submit</button>
                             </div>
-                                <button>Submit</button>
+                              
 
                             </div>
 
@@ -150,10 +155,10 @@
                             <div class="DeleteContainer">
 
                             <div class="deleteContainer">
-                                <input type="text" placeholder="Enter Product Name"><br>
-                               
+                                <input type="text" placeholder="Enter Product Name" class="DeleteName"><br>
+                                <button type="button" onclick="ProductManagement('Delete',event)">Submit</button>
                             </div>
-                            <button>Submit</button>
+                          
                             </div>
                         </fieldset>
                     </form>

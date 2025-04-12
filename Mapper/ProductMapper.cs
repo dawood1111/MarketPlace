@@ -10,6 +10,7 @@ namespace api.Mapper
                 Name=product.Name,
                 Price=product.Price,
                 Description=product.Description,
+                FileName=product.Image.FileName,
                 Category_Id=CategoryId
             };
         }

@@ -24,6 +24,7 @@ namespace api.Controller
         }
         [HttpPost("AddShoppingAddress")]
         public async Task<IActionResult> Create([FromBody]ShippingAddressDto shippingAddressDto){
+            
            var GetEmail=User.GetEmail();
            var FindEmail=await _user.FindByEmailAsync(GetEmail);
           var ShippingAddressModel= shippingAddressDto.ToShippingAddress();

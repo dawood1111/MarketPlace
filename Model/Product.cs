@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Http.Metadata;
 
 namespace api.Model
 {
@@ -10,10 +11,14 @@ namespace api.Model
         public String Name { get; set; }=string.Empty;
         [Column(TypeName ="decimal (10,2)")]
         [Required]
-        public Decimal Price { get; set; }
+        public Decimal? Price { get; set; }
         public String Description { get; set; }=string.Empty;
+         
+         public string FileName { get; set; }
+        
         public int Category_Id{ get; set; }
         public Category Category1 { get; set; }
         public List<CartItem> cartItem { get; set; }=new List<CartItem>();
+
     }
 }

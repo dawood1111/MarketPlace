@@ -203,3 +203,111 @@ async function GetShippingAddress(){
    }
    TotalOrders();
 
+
+
+  async function  ProductManagement(Type,event){
+    event.preventDefault();
+
+    if(Type=='Add'){
+
+    const CategoryName=document.querySelector('.category').value;
+     const url=`http://localhost:5296/UserAdmin/AddProduct?CategoryName=${CategoryName}
+`;
+     const Name=document.querySelector('.Name').value;
+     const Price = parseFloat(document.querySelector('.Price').value);
+     const Description=document.querySelector('.Description').value;
+     const ImageInput=document.querySelector('.Image').files[0];
+   
+
+     const formData = new FormData();
+     formData.append('name', Name);
+     formData.append('description', Description);
+     formData.append('price', Price);
+     formData.append('Image', ImageInput);
+     
+
+     if(!Name||!Description||isNaN(Price)){
+        alert("Please fill in all filed correctly")
+     }
+
+     const token = localStorage.getItem("token");
+
+     const response= await fetch(url,{
+        method:"POST",
+        headers: {
+         'Authorization': `Bearer ${token}`
+             },
+         body:formData
+         
+     })
+     
+     if(response.ok){
+
+        alert('Product Has Created Successfully');
+     }
+    
+    }else if(Type=='Update'){
+
+
+        const ProductName=document.querySelector('.productName').value;
+        const NewProduct=document.querySelector('.newProduct').value;
+        const NewDescription=document.querySelector('.newDescription').value;
+        const NewPrice=document.querySelector('.newPrice').value;
+
+
+
+        const values01={
+            NewProduct:NewProduct,
+            NewDescription:NewDescription,
+            NewPrice:NewPrice
+        }
+
+
+         let url=`http://localhost:5296/UserAdmin/UpdateProduct?Name=${encodeURIComponent(ProductName)}`;
+
+         if(NewProduct) url+=`&NewName=${encodeURIComponent(NewProduct)}`;
+         if(NewPrice) url+=`&NewPrice=${encodeURIComponent(NewPrice)}`;
+         if(NewDescription) url+=`&NewDescription=${encodeURIComponent(NewDescription)}`;
+
+
+         const token = localStorage.getItem("token");
+
+        const response= await fetch(url,{
+            method:"PUT",
+            headers: {
+            'Content-Type': 'application/json',
+             'Authorization': `Bearer ${token}`
+                 },
+             body: JSON.stringify(values01)
+             
+         })
+         if(response.ok){
+           if(NewProduct){
+            alert("Product Name Updated")
+          }
+           else if(NewPrice){
+            alert("Price Updated")
+          }
+           else if(NewDescription){
+            alert("Description Updated")
+          }
+         }
+
+    }else if(Type=='Delete'){
+        const DeleteName=document.querySelector('.DeleteName').value;
+
+        const url=`http://localhost:5296/UserAdmin/ProductDelete?Name=${DeleteName}`;
+        const token=localStorage.getItem('token');
+        const response = await fetch(url, {
+            method: "DELETE",
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+        if(response.ok){
+            alert('Deleted Succefully');
+        }
+    }
+
+   }
+

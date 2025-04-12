@@ -17,8 +17,14 @@ const response= await fetch(url,{
      body: JSON.stringify(User)
 })
 if(response.ok){
-     window.location.href="http://127.0.0.1:5500/api/Front-End/MainPage.html"
+    const token=response.text();
+    localStorage.setItem('token',token)
+    window.location.href="http://127.0.0.1:5500/api/Front-End/MainPage.html"
 }
 
 
 })
+
+function LoginNavigator(){
+    Window.location.href='http://127.0.0.1:5500/api/Front-End/AuthenticationInterface/Login/Log-In.html'
+}

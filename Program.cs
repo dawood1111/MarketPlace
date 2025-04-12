@@ -96,6 +96,7 @@ builder.Services.AddScoped<ITokenService,TokenServices>();
 builder.Services.AddScoped<ICartItem,CartItemRepos>();
 builder.Services.AddScoped<ICart,CartRepo>();
 builder.Services.AddScoped<IAdmin,AdminUser>();
+builder.Services.AddScoped<IAdminController,AdminControllerRepo>();
 
 
 builder.Services.AddCors(options =>

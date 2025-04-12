@@ -24,16 +24,19 @@ namespace api.Controller
             _user=user;
             _cartItem=cartItem;
         }
-        [HttpGet("GetAll")]
        
         [HttpGet("Id")]
         public async Task<IActionResult> GetId([FromRoute] int id){
             return Ok(await _cartItem.GetIdAsync(id)) ;
         }
+
+
          [HttpPost("AddCartItem")]
          public async Task<IActionResult> Create([FromBody] CartItemDto cartItemDto,String ProductName){
-             var user=User.GetEmail();
+           var user=User.GetEmail();
+
           var FindEmail=  await _user.FindByEmailAsync(user);
+
           if(FindEmail==null){ return NotFound("email not found");} 
 
             var FindProductName=await _context.Products.FirstOrDefaultAsync(p=>p.Name==ProductName);
@@ -42,14 +45,10 @@ namespace api.Controller
 
           var cart = await _context.Carts
         .FirstOrDefaultAsync(c => c.UserId == FindEmail.Id);
-              decimal price=FindProductName.Price;
+              decimal? price=FindProductName.Price;
               int ProductId=FindProductName.Id;
 
               
-              
-              
-              
-
             var CartItemModel=cartItemDto.ToCartItem(price,ProductId,FindProductName.Name,FindEmail.Id);
              CartItemModel.CartId=cart.Id;
         
