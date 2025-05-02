@@ -189,7 +189,7 @@ cursor: pointer;
      color: #2c3e50;
     margin-top: 10px;
     border-radius: 3px;
-    transition: background-color 0.6s ease-out animation 0.6s;
+    transition: transform 0.5s ease;
   
 
 
@@ -199,8 +199,7 @@ cursor: pointer;
     color: white;
     border: solid 2px white;
     cursor: pointer;
-    animation-name: ProductButton;
-    animation-duration: 0.6s;
+    transform: scale(1.1);
     border-radius: 6px;
 
 
@@ -254,8 +253,7 @@ cursor: pointer;
      color: #2c3e50;
     margin-top: 10px;
     border-radius: 3px;
-    transition: background-color 0.6s ease-out animation 0.6s;
-  
+    transition: transform 0.5s ease;  
 }
 
 .UpdateContainer button:hover{
@@ -263,8 +261,7 @@ cursor: pointer;
     color: white;
     border: solid 2px white;
     cursor: pointer;
-    animation-name: ProductButton;
-    animation-duration: 0.6s;
+    transform: scale(1.1);
     border-radius: 6px;
 
 
@@ -455,10 +452,11 @@ cursor: pointer;
  .sections i{
     margin-left: 10px;
  }
- .setting{
-    margin-top: 280px;
+ .LogOut{
+
+    margin-top: 150px;
  }
-.setting i{
+.LogOut i{
     margin-right: 10px;
 }
 .SectionHeader{

@@ -33,6 +33,5 @@ document.querySelector('.Logout-button').addEventListener('click',()=>{
     
     localStorage.removeItem('token');
     localStorage.removeItem('role');
-    window.location.href='http://127.0.0.1:5500/api/Front-End/MainPage.html';
-
+    window.location.href='http://127.0.0.1:5500/api/Front-End/AuthenticationInterface/Login/Log-In.html';
 })

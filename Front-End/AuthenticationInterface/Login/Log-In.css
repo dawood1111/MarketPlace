@@ -1,3 +1,5 @@
+
+
 .LogIn-Form{
     display: flex;
     justify-content: center;
@@ -13,15 +15,19 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: linear-gradient(to left, #ffffff, #efd5ba);
  }
  .login-container {
     width: auto;
     height: 500px;
     display: flex;
     justify-content: center;
-    background-color: white;
     box-shadow: 4px 4px 4px 2px  rgba(0, 0, 0, 0.1);
-
+    box-shadow: 
+    4px 0 5px -2px rgba(0, 0, 0, 0.1),  /* left */
+    0 5px 5px -2px rgba(0, 0, 0, 0.1),  /* bottom */
+    0 -5px 5px -2px rgba(0, 0, 0, 0.1); /* top */
+border-radius: 10px;       
 }
 .login-box {
     background: white;
@@ -33,13 +39,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
 }
 .login-box h1{
     font-family: "Roboto", sans-serif ;
-    color: #2F855A;
-    font-size: 28px;
+    color: #F57C00;
+    font-size: 34px;
     font-weight: 600;
 }
+.LogIn-Form p{
+    
+    color: #F57C00;
+    font-family: "Roboto", sans-serif ;
+
+    font-size: 16px;
+    margin-right: 290px;
+    margin-bottom: -5px;
+}
+
 
 h2 {
     margin-bottom: 15px;
@@ -50,23 +67,37 @@ h2 {
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-top: 10px;
+     
 
+ }
+ .LogIn-Form input:focus{
+    box-shadow: 2px 2px 3px #F57C00;
+    border:solid 1px #F57C00;
+    outline: none;
+
+ }
+ .LogIn-Form input ::placeholder{
+     color: #6FBF73;
  }
  .LogIn-Form button{
     width: 100%;
-    background: white;
-    color: #2F855A;
-    border: 1.5px solid #2F855A;
+    background: #F57C00;
+    border: none;
+    border-radius: 5px;
+    color: white;
     cursor: pointer;
+    margin-top: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
-    transition: background-color 1s ease-out ;
-
+     transition: background-color 0.5s ease-in;
    
  }
  .LogIn-Form button:hover{
-    background-color: #2F855A;
-    color: white;
+    background-color: white;
+    color: #F57C00;
+    border: 1px solid #F57C00;
+
     
      }
 
@@ -84,18 +115,23 @@ h2 {
 
     }
     .TextContainer{
-        background-color: #2F855A;
+        background-color:  #F57C00 ;
         color: #ffffff;
         width:350px;
         display: flex;
         flex-direction: column;
+        border-top-left-radius: 200px;
+        border-bottom-right-radius: 200px;
+        border-top-right-radius: 2px;
+        box-shadow: 3px 3px 5px #ffad5c;
         
         
     }
+
     .TextContainer h1{
      display: flex;
      justify-content: center;
-     margin-top: 80px;
+     margin-top: 110px;
      font-family:  "Roboto", sans-serif;
      ;
  
@@ -118,10 +154,9 @@ h2 {
     margin-top: 60px;
     width: 150px;
     margin-left: 100px;
-   
     border-radius: 20px;
     border: 1.5px white solid;
-    background-color: #2F855A;
+    background-color: #F57C00;
     color: white;
     font-size: 14px;
     font-weight: 700;
@@ -134,6 +169,6 @@ h2 {
     }
     .TextContainer button:hover{
         background-color: white;
-        color: #2F855A;
+        color: #F57C00;
 
     }

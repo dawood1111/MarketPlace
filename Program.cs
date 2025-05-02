@@ -79,7 +79,7 @@ option.DefaultSignOutScheme=JwtBearerDefaults.AuthenticationScheme;
 
 #pragma warning disable CS8604 // Possible null reference argument.
 option.TokenValidationParameters=new TokenValidationParameters{
- ValidateLifetime = true,
+ValidateLifetime = true,
 ValidateIssuer=true,
 ValidIssuer=builder.Configuration["JWT:Issuer"],
 ValidateAudience=true,

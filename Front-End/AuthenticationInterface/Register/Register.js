@@ -8,6 +8,7 @@ const User={
     Email:Email,
     Password:Password
 }
+
 const url="http://localhost:5296/User/Resgister";
 const response= await fetch(url,{
     method:"POST",
@@ -26,5 +27,5 @@ if(response.ok){
 })
 
 function LoginNavigator(){
-    Window.location.href='http://127.0.0.1:5500/api/Front-End/AuthenticationInterface/Login/Log-In.html'
+window.location.href='http://127.0.0.1:5500/api/Front-End/AuthenticationInterface/Login/Log-In.html'
 }
