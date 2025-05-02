@@ -27,6 +27,9 @@ navButton.forEach(button=>{
 
     
 })
+
+
+//OrderSection
 async function GetOrders(){
  const url="http://localhost:5296/UserAdmin/GetAllOrders";
  const token=localStorage.getItem("token")

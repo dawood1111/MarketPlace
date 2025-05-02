@@ -1,7 +1,9 @@
+using System.Reflection.Metadata.Ecma335;
 using System.Security.Authentication;
 using api.Data;
 using api.Extension;
 using api.Model;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -41,19 +43,24 @@ namespace api.Controller
               shippingAddress=FindshippingAddress,
               OrderStatus="Pending",
               TotalPrice=0
+       
               
             };
             await _context.Orders.AddAsync(order);
              await _context.SaveChangesAsync();
-            }
+
             
+            }
+        
            
          
+
             foreach(var CartItem in Cart.SelectMany(c=>c.cartitem)){
                 var orderItem=new OrderItems{
             
                 OrderId=FindOrder.Id,
                 ProductName=CartItem.ProductName,
+
                 Quantity=CartItem.Quantity,
                 Price=CartItem.Price,
                 TotalPrice=CartItem.Price*CartItem.Quantity
@@ -62,28 +69,27 @@ namespace api.Controller
                 };
                 FindOrder.TotalPrice+=orderItem.TotalPrice;
               
-                {
-                    
-                }
-
               
+          
+
                 
 
                 await _context.OrderItem.AddAsync(orderItem);
             }
             await _context.SaveChangesAsync();
+            return Ok(new{message="Created Succefully"});
              
             
+                
 
             
 
-            return Ok(new{message="created succesfully"});
+            
 
 
-
-
+           
         }
-
-        
     }
-}
+    }
+        
+    
