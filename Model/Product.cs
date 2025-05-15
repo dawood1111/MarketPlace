@@ -12,7 +12,6 @@ namespace api.Model
         [Column(TypeName ="decimal (10,2)")]
         [Required]
         public Decimal? Price { get; set; }
-        public String Description { get; set; }=string.Empty;
          
          public string FileName { get; set; }
         

@@ -1,7 +1,9 @@
 using api.Data;
 using api.Interface;
 using api.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 
 namespace api.Admin
 {
@@ -33,6 +35,7 @@ namespace api.Admin
             }
         }
         }
+     
 
        
 

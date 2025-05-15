@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Admin</title>
     <link rel="stylesheet" href="AdminPage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +16,8 @@
     <body>
         <div class="Container">
              <div class="header">
-                <i class="fa-solid fa-user-tie"></i> Admin
+                <div><i class="fa-solid fa-circle-user"></i></div>
+                 <div>Admin Panel</div>
              </div>
             <div class="SideBarContainer">
                 
@@ -63,29 +67,42 @@
 
 
             <div id="section1" class="content" style="display: none;">
-                <div class="Container00">
-                    <P class="text1">Total Revenue</P> 
-                    <p class="num1">123</p>
-                 <i class="fa-solid fa-money-bill" id="icon1"></i>
-                       </div>
-                <div class="Container00">
-                 <P class="text1">Total Buyers</P> 
-                 <p class="num2">123</p>
-                    <i class="fa-solid fa-users" id="icon2"></i>
+                <h2 class="DashboardHeader">Dashboard</h2>
 
-             
-             </div>
-                <div class="Container00">
-                    <P class="text1">Total Orders</P> 
-                    <p class="num3">123</p>
-                 <i class="fa-solid fa-cart-shopping" id="icon3"></i>
-             </div>         
+                <div class="Container000">
+                    <div class="Container00">
+                        <P class="text1">Total Revenue</P> 
+                        <p class="num1">123</p>
+                     <i class="fa-solid fa-money-bill" id="icon1"></i>
+                           </div>
+    
+                    <div class="Container00">
+                     <P class="text1">Total Buyers</P> 
+                     <p class="num2">123</p>
+                        <i class="fa-solid fa-users" id="icon2"></i>
+    
+                 
+                 </div>
+                    <div class="Container00">
+                        <P class="text1">Total Orders</P> 
+                        <p class="num3">123</p>
+                     <i class="fa-solid fa-cart-shopping" id="icon3"></i>
+                 </div>  
+                </div>
+                <canvas id="OrderStatus"  width="700px" height="350px"></canvas>
+                <div class="ChartContainer">
+                    <canvas id="UserPerDay" width="20" height="7"></canvas>
+              
+                
+                </div>
+               
+
                          </div>
          
 
 
                 <div id="section2" class="content" style="display: none;">
-                    <h1 class="SectionHeader">ShippingAddress</h1>
+                    <h2 class="SectionHeader">ShippingAddress</h2>
                     <table class="Table2">
                         <thead>
                             <tr>
@@ -106,35 +123,41 @@
 
                 <div id="section3" class="content" style="display: none;">
 
-                    <form action="">
-                        <fieldset>
-                            <legend>Add</legend>
+                    <h2 class="PMHeader">ProductManagement</h2>
+
                             <div class="AddContainer">
                                 <div class="addContainer">
+                                    <div class="Header00">Add</div>
                                     <input type="text" placeholder="Enetr Name......" class="Name">
                                     <input type="number" style="display: inline;" placeholder="Enetr Price...." class="Price">
                                     <input type="text" placeholder="Enetr Description....." class="Description">
                                     <input type="file" class="Image">
                                     
-                                    <select name="" id="" class="category">
-                                        <option value="Food">Food</option>
-                                        <option value="Clean">Clean</option>
-                                        <option value="Vegtables">Vegtables</option>
-                                    </select><br>
+                                    <select class="category">
+             <option value="Fruit & Veg">Fruit & Veg</option>
+             <option value="Poultry,Meat & Seafood">Poultry, Meat & Seafood</option>
+             <option value="Bakery">Bakery</option>
+             <option value="Dairy & Eggs">Dairy & Eggs</option>
+             <option value="Deli">Deli</option>
+             <option value="Snaks & Chocolate">Snaks & Chocolate</option>
+              <option value="Disposabels">Disposabels</option>
+              <option value="Frozen Food">Frozen Food</option>
+               <option value="Coffe & Tea">Coffe & Tea</option>
+              <option value="Drinks">Drinks</option>
+               <option value="Cleaning & Laundry">Cleaning & Laundry</option>
+               <option value="Cooking & Baking">Cooking & Baking</option>
+</select><br>
                                    
                                     <button type="button"  onclick="ProductManagement('Add',event)">Submit</button>
                                 </div>
                                   
                                 
                             </div>
-                        </fieldset>
-                    </form>
+                    
 
-                    <form action="">
-                        <fieldset>
-                            <legend>Update</legend>
                             <div class="UpdateContainer">
                                 <div class="updateContainer">
+                                    <div class="Header00">Update</div>
                                 <input type="text" placeholder="Enetr Product Name....." class="productName">
                                 <input type="text" placeholder="Enter New Name...." class="newProduct">
                                 <input type="number" placeholder="Enter New Price"
@@ -145,24 +168,21 @@
                               
 
                             </div>
-
-                        </fieldset>
-                    </form>
+                          
                  
                     
                    
-                    <form action="">
-                        <fieldset>
-                            <legend>Delete</legend>
-                            <div class="DeleteContainer">
+                    
+\                            <div class="DeleteContainer">
 
                             <div class="deleteContainer">
+                                <div class="Header00">Delete</div>
                                 <input type="text" placeholder="Enter Product Name" class="DeleteName"><br>
                                 <button type="button" onclick="ProductManagement('Delete',event)">Submit</button>
                             </div>
                           
                             </div>
-                        </fieldset>
+                       </fieldset>
                     </form>
                     
                   
@@ -172,7 +192,7 @@
                 </div>
                <div id="section4" class="content"  style="display: none;">
                 <div>
-                    <h1 class="SectionHeader">Order</h1>
+                    <h2 class="SectionHeader">Order</h2>
                     <table class="Table1">
                         <thead>
                             <tr>
@@ -180,12 +200,27 @@
                                 <th>CustomerName</th>
                                 <th>Date</th>
                                 <th>Total</th>
-                                <th>Status</th>
+                                <th>OrderStatus</th>
+                                <th>UpdateStatus</th>
+                                
                                 
                                </tr>
                         </thead>
                         <tbody class="OrderList"></tbody>
                     </table>
+                    <div class="UpdateContainer01 hidden" >
+                        <button class="exit">X</button>
+                        <select name="" id="" class="menu">
+                            <option value="Pending">Pending</option>
+                            <option value="Canceled">Canceled</option>
+                            <option value="Deliverd">Deliverd</option>
+                            <option value="Shipped">Shipped</option>
+                        </select>
+                       
+                        <input type="text" placeholder="Description">
+                        <button class="Update-Btn">Update</button>
+
+                    </div>
                 </div>
                     
 
@@ -195,7 +230,7 @@
 
                 <div>
                     <div id="section5" class="content"  style="display: none;">
-                        <h1 class="SectionHeader">OrdeItems</h1>
+                        <h2 class="SectionHeader">OrdeItems</h2>
                 <table class="Table3">
                     <thead>
                         <tr>
@@ -220,7 +255,9 @@
        
 
         </div>
+          <div class="hidden">
 
+          </div>
         
        <script src="AdminPage.js" ></script>
     </body>

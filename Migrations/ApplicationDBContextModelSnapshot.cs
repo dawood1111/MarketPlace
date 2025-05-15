@@ -51,13 +51,13 @@ namespace api.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "0582c05e-3f75-40df-92f4-9bceab1e9254",
+                            Id = "20d99b93-f43e-4d48-ac3f-3b17db095259",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "1809714f-682b-46bf-a3a0-e36949905fe2",
+                            Id = "8cbed4a0-a330-4872-95be-c2a8e4f1c978",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });
@@ -319,9 +319,6 @@ namespace api.Migrations
                     b.Property<int>("Category_Id")
                         .HasColumnType("int");
 
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("FileName")
                         .HasColumnType("nvarchar(max)");
 
@@ -387,6 +384,9 @@ namespace api.Migrations
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
                         .HasMaxLength(256)

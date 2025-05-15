@@ -5,7 +5,6 @@ namespace api.DTO
     
         public String Name { get; set; }=string.Empty;
         public Decimal Price { get; set; }
-        public String Description { get; set; }=string.Empty;
         public IFormFile Image { get; set; }
        
     }

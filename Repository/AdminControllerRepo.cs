@@ -3,7 +3,10 @@ using api.DTO;
 using api.Interface;
 using api.Mapper;
 using api.Model;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+
 
 namespace api.Repository
 {
@@ -30,15 +33,16 @@ namespace api.Repository
         }
 
 
-        public async Task<Product> AddProductAsync(ProductDto productDto, string categoryName)
+        public async Task<Product> AddProductAsync([FromForm]ProductDto productDto, string categoryName)
         {
-
-             var FindCategoryName=await _context.Categories.FirstOrDefaultAsync(n=>n.Name==categoryName);
+       
+          var FindCategoryName=await _context.Categories.FirstOrDefaultAsync(n=>n.Name==categoryName);
 
                int CategoryId=FindCategoryName.Id;
 
                string fileName=Path.GetFileName(productDto.Image.FileName);
-               string FolderPath=@"C:\Users\user\Desktop\Imageasp";
+               
+               string FolderPath=@"C:\Users\user\Desktop\image";
                
                string path=Path.Combine(FolderPath,fileName);
 
@@ -53,10 +57,16 @@ namespace api.Repository
               await _context.Products.AddAsync(ProductModel);
                await _context.SaveChangesAsync();
 
+
                   return ProductModel;
+
+       
+
+             
 
          }
 
+   
 
         public async Task<string> DeleteProductAsync(string Name)
         {
@@ -74,9 +84,7 @@ namespace api.Repository
              if(!string.IsNullOrEmpty(newName)){
                FindNameAsync.Name=newName;
           }
-           if(!string.IsNullOrEmpty(newDescription)){
-               FindNameAsync.Description=newDescription;
-          }
+           
            if(newPrice.HasValue){
                FindNameAsync.Price=newPrice;
           }

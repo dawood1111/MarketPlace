@@ -41,7 +41,8 @@ public async Task<IActionResult> Register([FromBody] RegisterDto registerDto)
     {
         UserName = registerDto.UserName,
         Email = registerDto.Email,
-        Role=Role
+        Role=Role,
+        CreatedAt=DateTime.UtcNow
     };
 
     // Save the user to the database

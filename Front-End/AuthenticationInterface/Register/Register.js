@@ -10,6 +10,7 @@ const User={
 }
 
 const url="http://localhost:5296/User/Resgister";
+
 const response= await fetch(url,{
     method:"POST",
     headers: {
@@ -18,9 +19,9 @@ const response= await fetch(url,{
      body: JSON.stringify(User)
 })
 if(response.ok){
-    const token=response.text();
+    const token= await response.text();
     localStorage.setItem('token',token)
-    window.location.href="http://127.0.0.1:5500/api/Front-End/MainPage.html"
+    window.location.href="http://127.0.0.1:5500/api/Front-End/MainPage/MainPage.html"
 }
 
 

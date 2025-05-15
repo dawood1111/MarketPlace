@@ -9,8 +9,15 @@ namespace api.Mapper
             return new Product{
                 Name=product.Name,
                 Price=product.Price,
-                Description=product.Description,
-                FileName=product.Image.FileName,
+                FileName= product.Image.FileName,
+                Category_Id=CategoryId
+            };
+        }
+
+         public static Product ToProduct2(this ProductDto2 product,int CategoryId){
+            return new Product{
+                Name=product.Name,
+                Price=product.Price,
                 Category_Id=CategoryId
             };
         }

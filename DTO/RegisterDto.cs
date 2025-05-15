@@ -15,5 +15,6 @@ namespace api.DTO
         [MinLength(10,ErrorMessage ="Require at least 10 letters")]
         [MaxLength(20,ErrorMessage ="Require Maximum 20")]
         public String Password { get; set; }=string.Empty;
+
     }
 }
