@@ -6,10 +6,14 @@ namespace api.Mapper
 {
     public static class Mapper
     {
-        public static CartItem ToCartItem(this CartItemDto cartItem,int productId){
+        public static CartItem ToCartItem(this CartItemDto cartItem,decimal ProductPrice,int ProductId,String productName,String userId){
             return new CartItem{
                 Quantity=cartItem.Quantity,
-                ProductId=productId,
+                Price=ProductPrice,
+                ProductId=ProductId,
+                ProductName=productName,
+                UserId=userId
+               
               
             
 

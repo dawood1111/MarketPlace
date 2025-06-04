@@ -5,12 +5,12 @@ namespace api.Mapper
 {
     public static class ProductMapper
     {
-        public static Product ToProduct(this ProductDto product){
+        public static Product ToProduct(this ProductDto product,int CategoryId){
             return new Product{
                 Name=product.Name,
                 Price=product.Price,
                 Description=product.Description,
-                Category_Id=product.Category_Id
+                Category_Id=CategoryId
             };
         }
         

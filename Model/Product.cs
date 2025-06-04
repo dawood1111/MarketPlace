@@ -12,7 +12,7 @@ namespace api.Model
         [Required]
         public Decimal Price { get; set; }
         public String Description { get; set; }=string.Empty;
-        public int Category_Id { get; set; }
+        public int Category_Id{ get; set; }
         public Category Category1 { get; set; }
         public List<CartItem> cartItem { get; set; }=new List<CartItem>();
     }

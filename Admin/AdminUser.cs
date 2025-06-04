@@ -17,9 +17,11 @@ namespace api.Admin
         String Email="dawoodadmin888@gmail.com";
         String Password="P@ssword_Admin888";
         String UserName="DawoodAdmin";
+        string Role="Admin";
         var AdminUser=new User{
             UserName=UserName,
               Email=Email,
+              Role=Role
         };
         if(await _user.FindByEmailAsync(Email)==null){
             var CreateUserAdmin=await _user.CreateAsync(AdminUser,Password);

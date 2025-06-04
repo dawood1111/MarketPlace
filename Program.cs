@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using api.Admin;
 using api.Data;
 using api.Interface;
@@ -78,12 +79,14 @@ option.DefaultSignOutScheme=JwtBearerDefaults.AuthenticationScheme;
 
 #pragma warning disable CS8604 // Possible null reference argument.
 option.TokenValidationParameters=new TokenValidationParameters{
+ ValidateLifetime = true,
 ValidateIssuer=true,
 ValidIssuer=builder.Configuration["JWT:Issuer"],
 ValidateAudience=true,
 ValidAudience=builder.Configuration["JWT:Audience"],
 ValidateIssuerSigningKey=true,
-IssuerSigningKey=new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(builder.Configuration["JWT:SigningKey"]))
+IssuerSigningKey=new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(builder.Configuration["JWT:SigningKey"])),
+RoleClaimType=ClaimTypes.Role
 
     };
 #pragma warning restore CS8604 // Possible null reference argument.

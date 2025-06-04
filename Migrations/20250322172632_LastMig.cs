@@ -7,7 +7,7 @@
 namespace api.Migrations
 {
     /// <inheritdoc />
-    public partial class SevMig : Migration
+    public partial class LastMig : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -15,20 +15,20 @@ namespace api.Migrations
             migrationBuilder.DeleteData(
                 table: "AspNetRoles",
                 keyColumn: "Id",
-                keyValue: "283fd566-14b0-4fe4-97ed-9f17e5b1dcce");
+                keyValue: "85cf74bc-83df-4ea9-bf1c-82b6303f01cc");
 
             migrationBuilder.DeleteData(
                 table: "AspNetRoles",
                 keyColumn: "Id",
-                keyValue: "5877ac65-4d89-453c-85a5-fc7629d20081");
+                keyValue: "ef8f22b0-ef44-47d6-87ba-1f04d79d988b");
 
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "415effe4-7cb8-4d29-98ea-513968120b33", null, "User", "USER" },
-                    { "bbfeb8dc-0f8e-4f53-9a58-502f16a923ae", null, "Admin", "ADMIN" }
+                    { "13216294-ebbd-44d7-ab22-644a272c5dcd", null, "User", "USER" },
+                    { "f0a450df-5645-4450-9be0-64ada5515c6c", null, "Admin", "ADMIN" }
                 });
         }
 
@@ -38,20 +38,20 @@ namespace api.Migrations
             migrationBuilder.DeleteData(
                 table: "AspNetRoles",
                 keyColumn: "Id",
-                keyValue: "415effe4-7cb8-4d29-98ea-513968120b33");
+                keyValue: "13216294-ebbd-44d7-ab22-644a272c5dcd");
 
             migrationBuilder.DeleteData(
                 table: "AspNetRoles",
                 keyColumn: "Id",
-                keyValue: "bbfeb8dc-0f8e-4f53-9a58-502f16a923ae");
+                keyValue: "f0a450df-5645-4450-9be0-64ada5515c6c");
 
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "283fd566-14b0-4fe4-97ed-9f17e5b1dcce", null, "User", "USER" },
-                    { "5877ac65-4d89-453c-85a5-fc7629d20081", null, "Admin", "ADMIN" }
+                    { "85cf74bc-83df-4ea9-bf1c-82b6303f01cc", null, "Admin", "ADMIN" },
+                    { "ef8f22b0-ef44-47d6-87ba-1f04d79d988b", null, "User", "USER" }
                 });
         }
     }
