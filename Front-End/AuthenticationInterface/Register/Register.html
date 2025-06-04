@@ -4,6 +4,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Boldonse&family=Concert+One&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="Register.css">
     </head>
@@ -26,9 +28,27 @@
 
 
                 <form action="" class="Register-Form">
-                    <input type="text" class="UserName" placeholder="UserName">
-                    <input type="email" class="Email" placeholder="Email">
-                    <input type="password" class="Password" placeholder="Password">
+                    
+                    <div>
+                    <label for="">UserName</label>
+                    <input type="text" class="UserName" >
+                     <div class="error"></div>
+                    </div>
+                    <div>
+                        <label for="">Email</label>
+                         <input type="email" class="Email" >
+                         <div class="error"></div>
+
+                    </div>
+                    <div>
+                        <label for="">Password</label>
+                     <input type="password" class="Password" >
+                     <div class="error"></div>
+
+
+                    </div>
+                    
+                   
                     <button class="Submit">Create account</button>
                     </form>
                    

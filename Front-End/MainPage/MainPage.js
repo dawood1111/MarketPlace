@@ -1,4 +1,4 @@
-/*document.querySelector('.Login-button').addEventListener("click",()=>{
+document.querySelector('.Login-button').addEventListener("click",()=>{
     window.location.href='http://127.0.0.1:5500/api/Front-End/AuthenticationInterface/Login/Log-In.html';
 
    
@@ -37,7 +37,6 @@ document.querySelector('.Logout-button').addEventListener('click',()=>{
 
 
 
-*/
 
 let showcart = true;
 let card = document.querySelector(".heads")
@@ -56,18 +55,7 @@ function show() {
     showcart = !showcart; // عكس القيمة
 
 }
-/*
-document.querySelectorAll(".add-to-cart").forEach(icon => {
-    icon.addEventListener("click", function (event) {
-        event.stopPropagation();
 
-        let product = icon.closest(".proud");
-        let name = product.getAttribute("data-name");
-        let price = parseFloat(product.getAttribute("data-price")); 
-        addToCart(name, price);
-    });
-});
-*/
 
 let cartCount = 0;
 let totalPrice = 0; // إضافة متغير لحساب المجموع الكلي
@@ -85,96 +73,7 @@ function updateCartBadge() {
 function updateTotalPrice() {
     totalElement.textContent = `$${totalPrice.toFixed(2)}`; // عرض المجموع في السلة
 }
-/*
-// عند الضغط على زر إضافة المنتج إلى السلة
 
-document.querySelectorAll(".fa-cart-plus").forEach(button => {
-    button.addEventListener("click", (event) => {
-        // جلب معلومات المنتج
-        if (event.target.classList.contains("fa-cart-plus")) {
-        const productElement = event.target.closest(".proud");
-        const productName = productElement.getAttribute("data-name");
-        const productPrice = parseFloat(productElement.getAttribute("data-price").replace('$', '')); // استخراج السعر كعدد عشري
-
-        cartCount++;
-        totalPrice += productPrice; // إضافة السعر للمجموع الكلي
-        updateCartBadge();
-        updateTotalPrice(); // تحديث المجموع الكلي في السلة
-
-        // البحث عن المنتج في السلة
-        let existingItem = [...cartItemsContainer.children].find(item => 
-            item.getAttribute("data-name") === productName
-        );
-
-        if (existingItem) {
-            // إذا كان المنتج موجودًا، زِد الكمية فقط
-            let quantityElement = existingItem.querySelector(".quantity");
-            let quantity = parseInt(quantityElement.textContent);
-            quantityElement.textContent = quantity + 1;
-            totalPrice += productPrice; // إضافة السعر للمجموع الكلي
-        } else {
-            // إذا لم يكن المنتج موجودًا، أضفه للسلة
-            const cartItem = document.createElement("li");
-            cartItem.setAttribute("data-name", productName);
-            cartItem.innerHTML = `
-                ${productName} - $${productPrice.toFixed(2)} 
-                <span class="quantity">1</span> 
-                <button class="increase">+</button>
-                <button class="decrease">-</button>
-                <button class="remove">X</button> 
-            `;
-
-            // إضافة العنصر للسلة
-            cartItemsContainer.appendChild(cartItem);
-        }
-
-            // عند زيادة العدد
-            cartItem.querySelector(".increase").addEventListener("click", () => {
-                let quantityElement = cartItem.querySelector(".quantity");
-                let quantity = parseInt(quantityElement.textContent);
-                quantityElement.textContent = quantity + 1;
-                cartCount++;
-                totalPrice += productPrice; // إضافة السعر للمجموع الكلي
-                updateCartBadge();
-                updateTotalPrice(); // تحديث المجموع الكلي في السلة
-            });
-
-            // عند تقليل العدد
-            cartItem.querySelector(".decrease").addEventListener("click", () => {
-                let quantityElement = cartItem.querySelector(".quantity");
-                let quantity = parseInt(quantityElement.textContent);
-                
-                if (quantity > 1) {
-                    quantityElement.textContent = quantity - 1;
-                    totalPrice -= productPrice; // طرح السعر من المجموع الكلي
-                } else {
-                    cartItem.remove();
-                    totalPrice -= productPrice; // طرح السعر من المجموع الكلي
-                }
-
-                cartCount--;
-                updateCartBadge();
-                updateTotalPrice(); // تحديث المجموع الكلي في السلة
-            });
-
-            // عند الضغط على زر "❌" لحذف المنتج بالكامل
-            cartItem.querySelector(".remove").addEventListener("click", () => {
-                let quantityElement = cartItem.querySelector(".quantity");
-                let quantity = parseInt(quantityElement.textContent);
-
-                // طرح السعر من المجموع الكلي
-                totalPrice -= productPrice * quantity;
-                cartCount -= quantity;
-                updateCartBadge();
-                updateTotalPrice(); // تحديث المجموع الكلي في السلة
-
-                // إزالة العنصر من السلة
-                cartItem.remove();
-            });
-        }
-    });
-});
-*/
 //كبسة اتمام العملية 
 document.addEventListener("DOMContentLoaded", function() {
     const checkoutBtn = document.querySelector(".all button");
@@ -187,7 +86,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     checkoutBtn.addEventListener("click", function () {
         popupTotal.textContent = totalSpanInPage.textContent; // نسخ التوتال من الصفحة
-        popup.style.display = "block";
+        popup.style.display = "flex";
+
         overlay.style.display = "block";
     });
 
@@ -248,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function() {
             PhoneNumber:PhoneNumber
 
          }
-    const url01='http://localhost:5296/AddShoppingAddress'
+    const url01='http://localhost:5296/api/shippingAddress/Add'
     const response01=await fetch(url01,{
 
      method:"POST",
@@ -323,114 +223,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-/* 
 
 
 
-/*
-document.addEventListener('DOMContentLoaded',async ()=>{
-    const deletedProduct=localStorage.getItem('DeletedProduct');
-    
-    if(deletedProduct){
-        document.querySelectorAll('.proud').forEach(product=>{
-            const productName=product.getAttribute('data-name');
-            if(productName.toLowerCase()===deletedProduct.toLowerCase()){
-                product.remove();
-            }
 
-        });
-    }
-     let products0 = JSON.parse(localStorage.getItem('Products')) || [];
-        products0= products.filter(p => p.name !== deletedProduct);
-        localStorage.setItem('Products', JSON.stringify(products0));
-        localStorage.removeItem('DeletedProduct')
-
-
-
-})
-
-let products = [];
-
-try {
-  const stored = localStorage.getItem("Products");
-  const parsed = stored ? JSON.parse(stored) : [];
-  products = Array.isArray(parsed) ? parsed : [];
-} catch (e) {
-  console.error("Failed to parse Products:", e);
-}
-
-products.forEach(product => {
-  const divEle = document.createElement('div');
-  divEle.classList.add('proud');
-  divEle.setAttribute('data-name', product.name);
-  divEle.setAttribute('data-price', product.price);
-  divEle.innerHTML = `
-    <a href="#"><img src="image/${product.imageUrl}" alt="">
-    <p>${product.name}</p>
-    <h5>${product.price}$</h5>
-    </a>
-    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-  `;
-
-  document.querySelectorAll('.Category-Container').forEach(category01 => {
-    const dataCategory = category01.getAttribute('data-category');
-    if (product.category === dataCategory) {
-      category01.appendChild(divEle);
-    }
-  });
-});
-
-
- 
-function UpdateProduct(){
-
-   const updatedProduct = JSON.parse(localStorage.getItem('UpdatedProduct'));
-  const Product = JSON.parse(localStorage.getItem('Products')) || [];
-
-
-    const{originalName,updated}=updatedProduct;
-
-           const updatedPro= Product.map(pro=>{
-            if(pro.name.toLowerCase()==originalName.toLowerCase()){
-           if (updated.name) pro.name = updated.name;
-           if (updated.price) pro.price = updated.price;
-        }
-            return pro;
-            })
-
-            localStorage.setItem('Products',JSON.stringify(updatedPro))
-            localStorage.removeItem('updatedProduct')
-
-
-       updatedPro.forEach(product => {
-    const divEle = document.createElement('div');
-    divEle.classList.add('proud');
-    divEle.setAttribute('data-name', product.name);
-    divEle.setAttribute('data-price', product.price);
-
-    
-
-    divEle.innerHTML = `
-      <a href="#">
-      <a href="#"><img src="image/${product.imageUrl}" alt="">
-        <p>${product.name}</p>
-        <h5>${product.price}$</h5>
-            <i class="fa-solid fa-cart-plus add-to-cart"></i>
-      </a>
-    `;
-
-    // Append to the correct category container
-    document.querySelectorAll('.Category-Container').forEach(categoryEl => {
-      const category = categoryEl.getAttribute('data-category');
-      if (product.category === category) {
-        categoryEl.appendChild(divEle);
-      }
-    })
-})
-
-}
-
-*/
 
 document.addEventListener('DOMContentLoaded',async ()=>{
     const url=`http://localhost:5296/UserAdmin/GetProducts`
@@ -444,15 +240,89 @@ document.addEventListener('DOMContentLoaded',async ()=>{
       divEle.setAttribute('data-price', product.price);
       divEle.innerHTML = `
         <a href="#">
-          <img src="image/${product.fileName}" alt="">
+          <img src="image/${product.fileName}" alt="" class="ProImage">
           <p>${product.name}</p>
-          <h5>${product.price}$</h5>
+          <h5>${product.price} JOD</h5>
         </a>
+        <br>
         <i class="fa-solid fa-cart-plus add-to-cart"></i>
       `;
-      document.querySelector(".Category-Container").appendChild(divEle);
-    })
-   
+      if(product.category_Id==1){
+
+         const targetContainer = document.querySelector('.Category-Container[data-category="Fruit & Veg"]');
+           if (targetContainer) {
+              targetContainer.appendChild(divEle);
+             }
+
+    }else if(product.category_Id==2){
+         const targetContainer = document.querySelector('.Category-Container[data-category="Poultry,Meat & Seafood"]');
+           if (targetContainer) {
+              targetContainer.appendChild(divEle);
+             }
+
+    }else if(product.category_Id==3){
+         const targetContainer = document.querySelector('.Category-Container[data-category="Bakery"]');
+           if (targetContainer) {
+              targetContainer.appendChild(divEle);
+             }
+
+    }else if(product.category_Id==4){
+         const targetContainer = document.querySelector('.Category-Container[data-category="Dairy & Eggs"]');
+           if (targetContainer) {
+              targetContainer.appendChild(divEle);
+             }
+
+    }else if(product.category_Id==5){
+         const targetContainer = document.querySelector('.Category-Container[data-category="Deli"]');
+           if (targetContainer) {
+              targetContainer.appendChild(divEle);
+             }
+
+    }else if(product.category_Id==6){
+         const targetContainer = document.querySelector('.Category-Container[data-category="Snaks & Chocolate"]');
+           if (targetContainer) {
+              targetContainer.appendChild(divEle);
+             }
+
+    }else if(product.category_Id==7){
+         const targetContainer = document.querySelector('.Category-Container[data-category="Disposabels"]');
+           if (targetContainer) {
+              targetContainer.appendChild(divEle);
+             }
+
+    }else if(product.category_Id==8){
+         const targetContainer = document.querySelector('.Category-Container[data-category="Frozen Food"]');
+           if (targetContainer) {
+              targetContainer.appendChild(divEle);
+             }
+
+    }else if(product.category_Id==9){
+         const targetContainer = document.querySelector('.Category-Container[data-category="Coffe & Tea"]');
+           if (targetContainer) {
+              targetContainer.appendChild(divEle);
+             }
+
+    }else if(product.category_Id==10){
+         const targetContainer = document.querySelector('.Category-Container[data-category="Drinks"]');
+           if (targetContainer) {
+              targetContainer.appendChild(divEle);
+             }
+
+    }else if(product.category_Id==11){
+         const targetContainer = document.querySelector('.Category-Container[data-category="Cleaning & Laundry"]');
+           if (targetContainer) {
+              targetContainer.appendChild(divEle);
+             }
+
+    }else if(product.category_Id==12){
+         const targetContainer = document.querySelector('.Category-Container[data-category="Cooking & Baking"]');
+           if (targetContainer) {
+              targetContainer.appendChild(divEle);
+             }
+
+    }
+    
+})
 
 })
 

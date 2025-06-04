@@ -136,7 +136,7 @@ async function GetOrders(){
                 
                 break;
                 case'Shipped':
-                orderStatus.style.backgroundColor=' rgba(0, 123, 255, 0.1)';
+                orderStatus.style.backgroundColor=' rgba(0, 123, 255,0.1)';
                 orderStatus.style.color="#007bff";
                 break;
                 case'Canceled':
@@ -189,7 +189,7 @@ async function GetShippingAddress(){
           
            row.innerHTML=`
            <td>${order.id}</td>
-           <td>${order.shippingAddress.firstName}</td>
+           <td>${order.shippingAddress.firstName} ${order.shippingAddress.lastName}</td>
             <td>${order.shippingAddress.country}</td>
             <td>${order.shippingAddress.city}</td>
             <td>${order.shippingAddress.streetAddress}</td>
@@ -258,26 +258,7 @@ async function GetShippingAddress(){
 
    TotalRevenue();
 
-   async function TotalBuyers(){
-    const url="http://localhost:5296/DashBoard/TotalBuyers";
-    const token=localStorage.getItem("token")
-    const respone = await fetch(url,
-       {
-           method:"GET",
-           headers:{
-            "Authorization": `Bearer ${token}`,
-            'Content-Type': 'application/json'
-           }
-    })
-    if(respone.ok){
-        const totalBuyersNum=document.querySelector('.num2');
-        const data=await respone.json();
-        console.log("Total Buyers:", data);  // Debugging
-
-        totalBuyersNum.textContent=data.totalBuyers;
-    }
-   }
-   TotalBuyers();
+  
 
 
 
@@ -295,7 +276,6 @@ async function GetShippingAddress(){
     if(respone.ok){
         const totalOrdersNum=document.querySelector('.num3');
         const data=await respone.json();
-        console.log("Total orders:", data);  // Debugging
 
         totalOrdersNum.textContent=data.totalOrders;
     }
@@ -344,26 +324,9 @@ async function GetShippingAddress(){
      if(response.ok){
         alert('added Successfully')
 
-          const productResponse = await response.json();
-          const ProductTool={
-          id:productResponse.id,
-          name:Name,
-          price:Price,
-          category:CategoryName,
-          imageUrl: `${encodeURIComponent(ImageInput.name)}`
-        }
-
-  /*
-        let products = JSON.parse(localStorage.getItem('Products')) || [];
-
-        products.push(ProductTool);
+       
 
 
-        localStorage.setItem('Products', JSON.stringify(products));
-
-        localStorage.setItem('Category',CategoryName);
-        console.log(localStorage.getItem('Products'))
-        */
 
      }else{
         console.warn("Response body is empty.");
@@ -374,14 +337,12 @@ async function GetShippingAddress(){
 
         const ProductName=document.querySelector('.productName').value;
         const NewProduct=document.querySelector('.newProduct').value;
-        const NewDescription=document.querySelector('.newDescription').value;
         const NewPrice=document.querySelector('.newPrice').value;
 
 
 
         const values01={
             NewProduct:NewProduct,
-            NewDescription:NewDescription,
             NewPrice:NewPrice
         }
 
@@ -390,7 +351,6 @@ async function GetShippingAddress(){
 
          if(NewProduct) url+=`&NewName=${encodeURIComponent(NewProduct)}`;
          if(NewPrice) url+=`&NewPrice=${encodeURIComponent(NewPrice)}`;
-         if(NewDescription) url+=`&NewDescription=${encodeURIComponent(NewDescription)}`;
 
 
          const token = localStorage.getItem("token");
@@ -411,20 +371,8 @@ async function GetShippingAddress(){
            else if(NewPrice){
             alert("Price Updated")
           }
-           else if(NewDescription){
-            alert("Description Updated")
-          }
+         
 
-           const product={
-            originalName:ProductName,
-            updated:{
-                name:NewProduct,
-                price:NewPrice
-            }
-
-           }
-
-          localStorage.setItem('UpdatedProduct',JSON.stringify(product));
           
 
          }
@@ -443,7 +391,6 @@ async function GetShippingAddress(){
         if(response.ok){
 
             alert('Deleted Succefully');
-            localStorage.setItem('DeletedProduct',DeleteName)
            
             
         }else{
@@ -459,6 +406,7 @@ async function GetShippingAddress(){
     localStorage.removeItem('role');
     window.location.href='http://127.0.0.1:5500/api/Front-End/AuthenticationInterface/Login/Log-In.html';
    })
+
    async function OrderStatusCount(){
     const url="http://localhost:5296/UserAdmin/GetStatus";
     const token=localStorage.getItem('token');
@@ -467,6 +415,7 @@ async function GetShippingAddress(){
         headers: {
             'Authorization': `Bearer ${token}`
         }
+
     }).then(res=>res.json()).
     then(data=>{
         const lable =data.map(item=>item.status);
@@ -479,7 +428,7 @@ async function GetShippingAddress(){
                 datasets:[{
                     label:'Orders Status Distribution',
                     data:count,
-                    backgroundColor: ['#facc15', '#3b82f6', '#10b981']
+                    backgroundColor: ['#f0ad4e', 'rgba(0, 123, 255)','#dc3545', '#10b981',]
                 }]
             },options: {
                 responsive: false, // Important for fixed size
@@ -498,6 +447,7 @@ async function GetShippingAddress(){
 
     })
    }
+
    OrderStatusCount();
 
 
@@ -512,10 +462,11 @@ async function GetShippingAddress(){
     })
 const PerDayUser=document.getElementById('UserPerDay');
  const data = await res.json();
-
+/*item.day*/
  const DayName = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
-  const labels = data.map(item => DayName[item.Day - 1]);
+  const labels = data.map(item =>`Day${item.day}`);
   const counts = data.map(item => item.count);
+  console.log(data)
 
 
   new Chart(PerDayUser, {
@@ -523,7 +474,7 @@ const PerDayUser=document.getElementById('UserPerDay');
     data: {
       labels: labels,
       datasets: [{
-        label: 'New Users Per Month',
+        label: 'New Users Per Day',
         data: counts,
         borderColor: '#3b82f6',
         backgroundColor: 'rgba(59, 130, 246, 0.2)',

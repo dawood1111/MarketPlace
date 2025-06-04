@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="g-css.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Boldonse&family=Concert+One&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
     <script src="MainPage.js" defer></script>
 </head>
 <body>
@@ -19,27 +24,31 @@
             <a href="#"></a><h1 style="cursor: pointer;">DMA-MARKET</h1></a>
         </div>
         <div class="search">
-            <label><i class="fa-solid fa-magnifying-glass"></i>Search</label><input type="search" placeholder=" what are you looking for ?">
+            <label> <i class="fa-solid fa-magnifying-glass"></i></label><input type="search" placeholder=" what are you looking for ?">
         </div>
+
         <div class="icons">
             <i class="fa-solid fa-cart-shopping btn"></i>
-            <span class="cart-badge">0</span>
+            <span class="cart-badge"></span>
         </div>
+
         <div class="user">
             <div class="img">
                
             </div>
-            <div class="data">
-                <p>welcome</p>
-                <h4>Ayman-zahran</h4>
+            <div class="Authentication-button">
+               <button class="Register-button">Register</button>
+               <button class="Login-button">Login</button>
+               <button class="Logout-button">Logout</button>
             </div>
         </div>
         
     </div>
     <div class="market">
-            <img src="./img/market.avif" alt="">
+            <img src="Image/market.avif" alt="">
         </div>
         <div class="content">
+            
             <div class="category">
                 <h3>All Category :</h3>
                 <ul>
@@ -59,6 +68,7 @@
                     
                 </ul>
             </div>
+    
             <div class="menu">
                 <h1>All products : </h1>
                 <div class="products">
@@ -108,7 +118,7 @@
                     </div>
                     <div class="prod"data-product-id="10">
                         <a href="#dinks">
-                        <img src="./img/drinks/الزهراء قارورة ماء للكولر 10 لتر.webp" alt="">
+                        <img src="Image/Matrix-Up-Carbonated-Drink.jpg" alt="">
                         <h3 style="text-align: center;">Drinks</h3></a>
                     </div>
                     <div class="prod"data-product-id="11">
@@ -137,102 +147,7 @@
              <!--Fruits and Vegs-->
  <div id="elevn" class="firstpro" >
     <div class="Category-Container" data-category="Fruit & Veg">
-    <!--
-<div class="proud" data-name="اجاص مستورد" data-price="1.50">
-    <a href="#"><img src="./img/fruit/اجاص مستورد.webp" alt="">
-    <p>اجاص مستورد</p>
-    <h5>1.50 JD</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-
-<div class="proud" data-name="الفراولة" data-price="2.00">
-    <a href="#"><img src="./img/fruit/الفراولة.webp" alt="">
-    <p>الفراولة</p>
-    <h5>2.00 JD</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-
-<div class="proud" data-name="باذنجان حبة صغيرة 500 غم" data-price="0.60">
-    <a href="#"><img src="./img/fruit/باذنجان حبة صغيرة 500 غم.webp" alt="">
-    <p>باذنجان حبة صغيرة 500 غم</p>
-    <h5>0.60 JD</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-
-<div class="proud" data-name="بصل أبيض 1 كغ" data-price="0.75">
-    <a href="#"><img src="./img/fruit/بصل أبيض 1 كغ.webp" alt="">
-    <p>بصل أبيض 1 كغ</p>
-    <h5>0.75 JD</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-
-<div class="proud" data-name="بطيخ قطعة واحدة - الوزن (6 كجم - 7.5 كجم)" data-price="3.50">
-    <a href="#"><img src="./img/fruit/بطيخ قطعة واحدة - الوزن (6 كجم - 7.5 كجم).webp" alt="">
-    <p>بطيخ قطعة واحدة - الوزن (6 كجم - 7.5 كجم)</p>
-    <h5>3.50 JD</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-
-<div class="proud" data-name="تفاح اخضر سميث 500 غم" data-price="1.25">
-    <a href="#"><img src="./img/fruit/تفاح اخضر سميث 500 غم.webp" alt="">
-    <p>تفاح اخضر سميث 500 غم</p>
-    <h5>1.25 JD</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-
-<div class="proud" data-name="تفاح أصفر 500 غم" data-price="1.15">
-    <a href="#"><img src="./img/fruit/تفاح أصفر 500 غم.webp" alt="">
-    <p>تفاح أصفر 500 غم</p>
-    <h5>1.15 JD</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-
-<div class="proud" data-name="تفاح زبداني مستورد" data-price="1.60">
-    <a href="#"><img src="./img/fruit/تفاح زبداني مستورد.webp" alt="">
-    <p>تفاح زبداني مستورد</p>
-    <h5>1.60 JD</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-
-<div class="proud" data-name="جرجير" data-price="0.40">
-    <a href="#"><img src="./img/fruit/جرجير.webp" alt="">
-    <p>جرجير</p>
-    <h5>0.40 JD</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-
-<div class="proud" data-name="سبانخ 1 كغ" data-price="0.95">
-    <a href="#"><img src="./img/fruit/سبانخ 1 كغ.webp" alt="">
-    <p>سبانخ 1 كغ</p>
-    <h5>0.95 JD</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-
-<div class="proud" data-name="ذرة حلوة 2 قطعة" data-price="0.90">
-    <a href="#"><img src="./img/fruit/ذرة حلوة 2 قطعة.webp" alt="">
-    <p>ذرة حلوة 2 قطعة</p>
-    <h5>0.90 JD</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-
-<div class="proud" data-name="فلفل حلو احمر 500 غرام" data-price="1.20">
-    <a href="#"><img src="./img/fruit/فلفل حلو احمر 500 غرام.webp" alt="">
-    <p>فلفل حلو احمر 500 غرام</p>
-    <h5>1.20 JD</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-
-<div class="proud" data-name="فلفل حلو اخضر 500 غ" data-price="1.00">
-    <a href="#"><img src="./img/fruit/فلفل حلو اخضر 500 غ.webp" alt="">
-    <p>فلفل حلو اخضر 500 غ</p>
-    <h5>1.00 JD</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-
-<div class="proud" data-name="فلفل حلو اصفر 500 غم" data-price="1.30">
-    <a href="#"><img src="./img/fruit/فلفل حلو اصفر 500 غم.webp" alt="">
-    <p>فلفل حلو اصفر 500 غم</p>
-    <h5>1.30 JD</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-
-<div class="proud" data-name="كوسا 1 كغ" data-price="1.00">
-    <a href="#"><img src="./img/fruit/كوسا 1 كغ.webp" alt="">
-    <p>كوسا 1 كغ</p>
-    <h5>1.00 JD</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-
-<div class="proud" data-name="كيوي مستورد" data-price="1.75">
-    <a href="#"><img src="./img/fruit/كيوي مستورد.webp" alt="">
-    <p>كيوي مستورد</p>
-    <h5>1.75 JD</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>-->
+  
 
 </div>
 
@@ -243,68 +158,7 @@
                   <!--Froze Food-->
 
       <div class="Category-Container" data-category="Frozen Food" id="froz">
-        <!--
-<div id="froz" class="proud" data-name="سنيورة اصابع دجاج 900 غم" data-price="4.75">
-    <a href="#"><img src="./img/frozen food/سنيورة اصابع دجاج 900 غم.jpg" alt="">
-    <p>سنيورة اصابع دجاج 900 غم</p>
-    <h5>4.75 JD</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-<div class="proud" data-name="سنيورة بيف برجر جامبو 1 كغم" data-price="5.25">
-    <a href="#"><img src="./img/frozen food/سنيورة بيف برجر جامبو 1 كغم.png" alt=""> 
-    <p>سنيورة بيف برجر جامبو 1 كغم.</p>
-    <h5>5.25 JD</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-<div class="proud" data-name="سنيورة تندر دجاج 400 غم" data-price="3.25">
-    <a href="#"><img src="./img/frozen food/سنيورة تندر دجاج 400 غم.png" alt="">
-    <p>سنيورة تندر دجاج 400 غم</p>
-    <h5>3.25 JD</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-<div class="proud" data-name="سنيورة حلقات دجاج 900 غم" data-price="4.90">
-    <a href="#"><img src="./img/frozen food/سنيورة حلقات دجاج 900 غم.png" alt="">
-    <p>سنيورة حلقات دجاج 900 غم</p>
-    <h5>4.90 JD</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-<div class="proud" data-name="سنيورة سجق حلبي 200غم" data-price="2.50">
-    <a href="#"><img src="./img/frozen food/سنيورة سجق حلبي 200غم.jpg" alt="">
-    <p>سنيورة سجق حلبي 200غم</p>
-    <h5>2.50 JD</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-<div class="proud" data-name="سنيورة سمبوسك جبنة 900 غم" data-price="4.50">
-    <a href="#"><img src="./img/frozen food/سنيورة سمبوسك جبنة 900 غم.jpg" alt="">
-    <p>سنيورة سمبوسك جبنة 900 غم</p> 
-    <h5>4.50 JD</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-<div class="proud" data-name="سنيورة سمبوسك لحمة 900 غم" data-price="4.75">
-    <a href="#"><img src="./img/frozen food/سنيورة سمبوسك لحمة 900 غم.jpg" alt="">
-    <p>سنيورة سمبوسك لحمة 900 غم</p>
-    <h5>4.75 JD</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-<div class="proud" data-name="سنيورة شاورما دجاج 400 غم" data-price="3.95">
-    <a href="#"><img src="./img/frozen food/سنيورة شاورما دجاج 400 غم.jpg" alt="">
-    <p>سنيورة شاورما دجاج 400 غم</p>
-    <h5>3.95 JD</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-<div class="proud" data-name="صدر دجاج صافي 900 غم" data-price="5.00">
-    <a href="#"><img src="./img/frozen food/سنيورة صدر دجاج صافي 900 غم.png" alt="">
-    <p>سنيورة صدر دجاج صافي 900 غم</p>
-    <h5>5.00 JD</h5></a><i class="fa-solid fa-cart-plus add-to-cart" ></i>
-</div>
-<div class="proud" data-name="سنيورة صوصج بقري جامبو 500 غم" data-price="4.65">
-    <a href="#"><img src="./img/frozen food/سنيورة صوصج بقري جامبو 500 غم.png" alt="">
-    <p>سنيورة صوصج بقري جامبو 500 غم</p>
-    <h5>4.65 JD</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-<div class="proud" data-name="سنيورة فيليه دجاج حار 900 جم" data-price="5.00">
-    <a href="#"><img src="./img/frozen food/سنيورة فيليه دجاج حار 900 جم.png" alt="">
-    <p>سنيورة فيليه دجاج حار 900 جم</p>
-    <h5>5.00 JD</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-<div class="proud" data-name="سنيورة بطاطس مقلية مجمدة 2.5 ك" data-price="3.50">
-    <a href="#"><img src="./img/frozen food/سنيورة بطاطس مقلية مجمدة 2.5 ك.jpg" alt="">
-    <p>سنيورة بطاطس مقلية مجمدة 2.5 ك</p>
-    <h5>3.50 JD</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
--->
+      
       </div>
 
 
@@ -313,414 +167,28 @@
 
 <!--Deli-->
 
-<div class="Category-Container" data-category="Deli" id="tow">
-    <!--
-<div id="two" class="proud" data-name="سنيورة روست بيف ايطالي فاخر 200 جم" data-price="2.25">
-    <a href="#"><img src="./img/deli/سنيورة روست بيف ايطالي فاخر 200 جم.jpg" alt="">
-    <p>سنيورة روست بيف ايطالي فاخر 200 جم.</p>
-    <h5>2.25 د.أ</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
+<div class="Category-Container" data-category="Deli" id="two">
+   
 </div>
-<div class="proud" data-name="سنيورة روست حبش اقتصادي 500 غم" data-price="2.50">
-    <a href="#"><img src="./img/deli/سنيورة روست حبش اقتصادي 500 غم.png" alt="">
-    <p>سنيورة روست حبش اقتصادي 500 غم</p>
-    <h5>2.50 د.أ</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-<div class="proud" data-name="سنيورة صدر دجاج شرائح 200 غم" data-price="2.35">
-    <a href="#"><img src="./img/deli/سنيورة صدر دجاج شرائح 200 غم.jpg" alt="">
-    <p>سنيورة صدر دجاج شرائح 200 غم</p>
-    <h5>2.35 د.أ</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-<div class="proud" data-name="سنيورة لانشون ديك رومي 800 جم" data-price="3.20">
-    <a href="#"><img src="./img/deli/سنيورة لانشون ديك رومي 800 جم.png" alt="">
-    <p>سنيورة لانشون ديك رومي 800 جم</p>
-    <h5>3.20 د.أ</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-<div class="proud" data-name="سنيورة لانشون لحم 340 جم" data-price="2.90">
-    <a href="#"><img src="./img/deli/سنيورة لانشون لحم 340 جم.jpg" alt="">
-    <p>سنيورة لانشون لحم 340 جم</p>
-    <h5>2.90 د.أ</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-<div class="proud" data-name="سنيورة مرتديلا بقري بالفلفل 200 غم" data-price="2.60">
-    <a href="#"><img src="./img/deli/سنيورة مرتديلا بقري بالفلفل 200 غم.jpg" alt="">
-    <p>سنيورة مرتديلا بقري بالفلفل 200 غم</p>
-    <h5>2.60 د.أ</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-<div class="proud" data-name="سنيورة مرتديلا ديك رومي سادة 1 كغ" data-price="4.50">
-    <a href="#"><img src="./img/deli/سنيورة مرتديلا ديك رومي سادة 1 كغ.jpg" alt="">
-    <p>سنيورة مرتديلا ديك رومي سادة 1 كغ</p>
-    <h5>4.50 د.أ</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-<div class="proud" data-name="سنيورة مرتديلا دجاج ساده 500 جم" data-price="3.80">
-    <a href="#"><img src="./img/deli/سنيورة مرتديلا دجاج ساده 500 جم.png" alt="">
-    <p>سنيورة مرتديلا دجاج ساده 500 جم</p>
-    <h5>3.80 د.أ</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-<div class="proud" data-name="سنيورة مرتديلا حبش بالفلفل 1 كغ" data-price="4.20">
-    <a href="#"><img src="./img/deli/سنيورة مرتديلا حبش بالفلفل 1 كغ.jpg" alt="">
-    <p>سنيورة مرتديلا حبش بالفلفل 1 كغ</p>
-    <h5>4.20 د.أ</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-<div class="proud" data-name="سنيورة مرتديلا حبش بالخضار 1 كغ" data-price="4.00">
-    <a href="#"><img src="./img/deli/سنيورة مرتديلا حبش بالخضار 1 كغ.png" alt="">
-    <p>سنيورة مرتديلا حبش بالخضار 1 كغ</p>
-    <h5>4.00 د.أ</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-<div class="proud" data-name="سنيورة مرتديلا بقري سادة 500 جم" data-price="2.80">
-    <a href="#"><img src="./img/deli/سنيورة مرتديلا بقري سادة 500 جم.jpg" alt="">
-    <p>سنيورة مرتديلا بقري سادة 500 جم</p>
-    <h5>2.80 د.أ</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-<div class="proud" data-name="سنيورة مرتديلا بقري سادة 1 كيلو" data-price="1.60">
-    <a href="#"><img src="./img/deli/سنيورة مرتديلا بقري سادة 1 كيلو.jpg" alt="">
-    <p>سنيورة مرتديلا بقري سادة 1 كيلو</p>
-    <h5>1.60 د.أ</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-                  </div>
-                -->
 
 
 
 <!--Poultry and meat and seafood-->
 
 <div class="Category-Container" data-category="Poultry,Meat & Seafood" id="three">
-    <!--Poultry, Meat & Seafood-->
-    <!--
-<div id="three" class="proud" data-name="أجنحة دجاج" data-price="2.30">
-    <a href="#"><img src="./img/poultry/أجنحة دجاج.jpg" alt="">
-    <p>أجنحة دجاج.</p>
-    <h5>2.30 د.أ</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
+   
 </div>
-<div class="proud" data-name="الوزن 900 غم – 1600 غم دجاج الجزيرة كامل" data-price="3.50">
-    <a href="#"><img src="./img/poultry/الوزن 900 غم – 1600 غم دجاج الجزيرة كامل.jpg" alt="">
-    <p>الوزن 900 غم – 1600 غم دجاج الجزيرة كامل</p>
-    <h5>3.50 د.أ</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-<div class="proud" data-name="تندر دجاج صحن طازج" data-price="2.90">
-    <a href="#"><img src="./img/poultry/تندر دجاج صحن طازج.jpg" alt="">
-    <p>تندر دجاج صحن طازج</p>
-    <h5>2.90 د.أ</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-<div class="proud" data-name="دجاج الجزيرة مجمد كامل مسحب" data-price="3.20">
-    <a href="#"><img src="./img/poultry/دجاج الجزيرة مجمد كامل مسحب.jpg" alt="">
-    <p>دجاج الجزيرة مجمد كامل مسحب</p>
-    <h5>3.20 د.أ</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-<div class="proud" data-name="دجاج كامل طازج" data-price="4.00">
-    <a href="#"><img src="./img/poultry/دجاج كامل طازج.jpg" alt="">
-    <p>دجاج كامل طازج</p>
-    <h5>4.00 د.أ</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-<div class="proud" data-name="شيش طازج" data-price="3.50">
-    <a href="#"><img src="./img/poultry/شيش طازج.jpg" alt="">
-    <p>شيش طازج</p>
-    <h5>3.50 د.أ</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-<div class="proud" data-name="صاجية دجاج طازج" data-price="3.00">
-    <a href="#"><img src="./img/poultry/صاجية دجاج طازج.jpg" alt="">
-    <p>صاجية دجاج طازج</p>
-    <h5>3.00 د.أ</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-<div class="proud" data-name="فخد دجاج سفلي طازج" data-price="3.20">
-    <a href="#"><img src="./img/poultry/فخد دجاج سفلي طازج.jpg" alt="">
-    <p>فخد دجاج سفلي طازج</p>
-    <h5>3.20 د.أ</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-<div class="proud" data-name="فخذ دجاج الجزيرة طازج" data-price="3.60">
-    <a href="#"><img src="./img/poultry/فخذ دجاج الجزيرة طازج.png" alt="">
-    <p>فخذ دجاج الجزيرة طازج</p>
-    <h5>3.60 د.أ</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-<div class="proud" data-name="فروج طازج كيس" data-price="4.30">
-    <a href="#"><img src="./img/poultry/فروج طازج كيس.jpg" alt="">
-    <p>فروج طازج كيس</p>
-    <h5>4.30 د.أ</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-<div class="proud" data-name="فيليه صدر دجاج الجزيرة طازج" data-price="4.50">
-    <a href="#"><img src="./img/poultry/فيليه صدر دجاج الجزيرة طازج.png" alt="">
-    <p>فيليه صدر دجاج الجزيرة طازج</p>
-    <h5>4.50 د.أ</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-<div class="proud" data-name="قوانص دجاج طازج" data-price="3.00">
-    <a href="#"><img src="./img/poultry/قوانص دجاج طازج.png" alt="">
-    <p>قوانص دجاج طازج</p>
-    <h5>3.00 د.أ</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-</div>
- -->
 
                 <!--Cocking and Backing-->
-                <div class="Category-Container" data-category="Cooking & Baking">
-                    <!--
-<div id="five" class="proud" data-name="الكسيح طحينة الذهبية 900 غم" data-price="1.20">
-    <a href="#"><img src="./img/cooking/الكسيح طحينة الذهبية 900 غم.jpeg" alt="">
-        <p>الكسيح طحينة الذهبية 900 غم</p>
-        <h5>1.20 د.أ</h5>
-    </a>
-    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-
-<div class="proud" data-name="الكسيح فطر شرائح 380 جم" data-price="1.50">
-    <a href="#"><img src="./img/cooking/الكسيح فطر شرائح 380 جم.jpeg" alt="">
-        <p>الكسيح فطر شرائح 380 جم</p>
-        <h5>1.50 د.أ</h5>
-    </a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-
-<div class="proud" data-name="الكسيح فول حبة كبيرة 390 غم" data-price="1.40">
-    <a href="#"><img src="./img/cooking/الكسيح فول حبة كبيرة 390 غم.jpeg" alt="">
-        <p>الكسيح فول حبة كبيرة 390 غم</p>
-        <h5>1.40 د.أ</h5>
-    </a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-
-<div class="proud" data-name="الكسيح فول مدمس حبة صغيرة 390غم" data-price="1.40">
-    <a href="#"><img src="./img/cooking/الكسيح فول مدمس حبة صغيرة 390غم.jpeg" alt="">
-        <p>الكسيح فول مدمس حبة صغيرة 390غم</p>
-        <h5>1.40 د.أ</h5>
-    </a>
-    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-
-<div class="proud" data-name="الكسيح متبل بالطحينة 135 غم" data-price="1.60">
-    <a href="#"><img src="./img/cooking/الكسيح متبل بالطحينة 135 غم.jpeg" alt="">
-        <p>الكسيح متبل بالطحينة 135 غم</p>
-        <h5>1.60 د.أ</h5>
-    </a>
-    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-
-<div class="proud" data-name="الكسيح معجون البندورة 135 غم" data-price="1.50">
-    <a href="#"><img src="./img/cooking/الكسيح معجون البندورة 135  غم.jpeg" alt="">
-        <p>الكسيح معجون البندورة 135 غم</p>
-        <h5>1.50 د.أ</h5>
-    </a>
-    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-
-<div class="proud" data-name="الكسيح ملح بحري 600 غم" data-price="1.80" >
-    <a href="#"><img src="./img/cooking/الكسيح ملح بحري 600 غم.jpeg" alt="">
-        <p>الكسيح ملح بحري 600 غم</p>
-        <h5>1.80 د.أ</h5>
-    </a>
-    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-
-<div class="proud" data-name="الكسيح نشا الذرة 350 غم" data-price="1.20">
-    <a href="#"><img src="./img/cooking/الكسيح نشا الذرة 350 غم.jpeg" alt="">
-        <p>الكسيح نشا الذرة 350 غم</p>
-        <h5>1.20 د.أ</h5>
-    </a>
-    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-
-<div class="proud" data-name="الكسيح فول مدمس بالفلفل الأحمر 390 غم" data-price="1.60">
-    <a href="#"><img src="./img/cooking/الكسيح_فول_مدمس_بالفلفل_الأحمر_390_غم.jpeg" alt="">
-        <p>الكسيح فول مدمس بالفلفل الأحمر 390 غم</p>
-        <h5>1.60 د.أ</h5>
-    </a>
-    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-
-<div class="proud" data-name="زعتر الكسيح اكسترا 450 غم" data-price="1.80">
-    <a href="#"><img src="./img/cooking/زعتر الكسيح اكسترا 450 غم.png" alt="">
-        <p>زعتر الكسيح اكسترا 450 غم</p>
-        <h5>1.80 د.أ</h5>
-    </a>
-    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-
-<div class="proud" data-name="فريكة خشنة ٦٥٠ غرام" data-price="2.00">
-    <a href="#"><img src="./img/cooking/فريكة خشنة ٦٥٠ غرام.jpg" alt="">
-        <p>فريكة خشنة ٦٥٠ غرام</p>
-        <h5>2.00 د.أ</h5>
-    </a>
-    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
-
-<div class="proud" data-name="مفتول 700غم" data-price="1.80">
-    <a href="#"><img src="./img/cooking/مفتول 700غم.png" alt="">
-        <p>مفتول 700غم</p>
-        <h5>1.80 د.أ</h5>
-    </a>
-    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-</div>
--->
+                <div class="Category-Container" data-category="Cooking & Baking" id="five">
                 </div>
+                   
 
 
 
                 <!--Snakes And Chocltes-->
                 <div class="Category-Container"  data-category="Snaks & Chocolate" id="four">
-                    <!--
-                    <div id="four" class="proud" data-name="الكسيح كاكاو بودرة 150 غم" data-price="5.00">
-                        <a href="#"><img src="./img/snaks&choclate/الكسيح كاكاو بودرة 150 غم (1).jpeg" alt="">
-                            <p>الكسيح كاكاو بودرة 150 غم</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-                    <div class="proud" data-name="جبري آيس كريم كنافة 70 جرام" data-price="5.00">
-                        <a href="#"><img src="./img/snaks&choclate/جبري آيس كريم كنافة 70 جرام.webp" alt="">
-                        <p>جبري آيس كريم كنافة 70 جرام</p>
-                        <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="جبري آيس كريم ميمو فراولة 57 جرام" data-price="5.00">
-                        <a href="#"><img src="./img/snaks&choclate/جبري آيس كريم ميمو فراولة 57 جرام.webp" alt="">
-                        <p>جبري آيس كريم ميمو فراولة 57 جرام</p>
-                        <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="جبري كيكة مثلجة بنكهة التشيز كيك 52 جرام" data-price="5.00">
-                        <a href="#"><img src="./img/snaks&choclate/جبري كيكة مثلجة بنكهة التشيز كيك 52 جرام.webp" alt="">
-                        <p>جبري كيكة مثلجة بنكهة التشيز كيك 52 جرام</p>
-                        <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="جود تايم بسكويت بالفراولة 22 جرام" data-price="5.00">
-                        <a href="#"><img src="./img/snaks&choclate/جود تايم بسكويت بالفراولة 22 جرام.avif" alt="">
-                        <p>جود تايم بسكويت بالفراولة 22 جرام</p>
-                        <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="ديما بسكويت ساندويتش نيو شوكولاتة 25 جرام" data-price="5.00">
-                        <a href="#"><img src="./img/snaks&choclate/ديما ﻿بسكويت ساندويتش نيو شوكولاتة 25 جرام.webp" alt="">
-                        <p>ديما بسكويت ساندويتش نيو شوكولاتة 25 جرام</p>
-                        <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="سناك شيبس 87 جرام" data-price="5.00">
-                        <a href="#"><img src="./img/snaks&choclate/سناك شيبس 87 جرام.webp" alt="">
-                        <p>سناك شيبس 87 جرام</p>
-                        <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="سيروب الكسيح بالشوكولاتة 680 غم" data-price="5.00">
-                        <a href="#"><img src="./img/snaks&choclate/سيروب الكسيح بالشوكولاتة 680 غم.jpeg" alt="">
-                        <p>سيروب الكسيح بالشوكولاتة 680 غم</p>
-                        <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="سيروب الكسيح بالفراولة 680 غم" data-price="5.00">
-                        <a href="#"><img src="./img/snaks&choclate/سيروب الكسيح بالفراولة 680 غم.jpeg" alt="">
-                        <p>سيروب الكسيح بالفراولة 680 غم</p>
-                        <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="شوكولاتة الكسيح بنكهة البندق 350 غم" data-price="5.00">
-                        <a href="#"><img src="./img/snaks&choclate/شوكولاتة_الكسيح_بنكهة_البندق_350غم.png" alt="">
-                        <p>شوكولاتة الكسيح بنكهة البندق 350 غم</p>
-                        <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="فشار 75 جم" data-price="5.00">
-                        <a href="#"><img src="./img/snaks&choclate/فشار 75 جم.webp" alt="">
-                        <p>فشار 75 جم</p>
-                        <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="كوكيز مع كريمة الشوكولاتة 75 جم" data-price="5.00">
-                        <a href="#"><img src="./img/snaks&choclate/كوكيز مع كريمة الشوكولاتة 75 جم.webp" alt="">
-                        <p>كوكيز مع كريمة الشوكولاتة 75 جم</p>
-                        <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="مستر شيبس بالبابريكا اصابع البطاطا 50 غم" data-price="5.00">
-                        <a href="#"><img src="./img/snaks&choclate/مستر شيبس بالبابريكا اصابع البطاطا50غم.jpg" alt="">
-                        <p>مستر شيبس بالبابريكا اصابع البطاطا 50 غم</p>
-                        <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="مستر شيبس مستر تورتيلا جبنة الناتشو 38 جم" data-price="5.00">
-                        <a href="#"><img src="./img/snaks&choclate/مستر شيبس مستر تورتيلا جبنة الناتشو 38 جم.webp" alt="">
-                        <p>مستر شيبس مستر تورتيلا جبنة الناتشو 38 جم</p>
-                        <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="مستر شيبس وافل مقطعة بالفلفل الحلو والفلفل الحار 75 جم" data-price="5.00">
-                        <a href="#"><img src="./img/snaks&choclate/مستر شيبس وافل مقطعة بالفلفل الحلو والفلفل الحار 75 جم .webp" alt="">
-                        <p>مستر شيبس وافل مقطعة بالفلفل الحلو والفلفل الحار 75 جم</p>
-                        <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="مستر شيبس وافل مقطعة بطعم ملح البحر 170 جرام" data-price="5.00">
-                        <a href="#"><img src="./img/snaks&choclate/مستر شيبس وافل مقطعة بطعم ملح البحر 170 جرام.webp" alt="">
-                        <p>مستر شيبس وافل مقطعة بطعم ملح البحر 170 جرام</p>
-                        <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-
-                        <div class="proud" data-name="ايس كريم ايسبرج - مكيكون فانيليا 130 جم" data-price="5.00">
-                            <a href="#"><img src="./img/snaks&choclate/ايس كريم ايسبرج - مكيكون فانيليا 130 جم.webp" alt="">
-                                <p>ايس كريم ايسبرج - مكيكون فانيليا 130 جم</p>
-                                <h5>5.00$</h5>
-                            </a>
-                            <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                        </div>
-
-                        <div class="proud" data-name="ايس كريم ايسبرج شوكولاتة مكيكون 130 جم" data-price="5.00">
-                            <a href="#"><img src="./img/snaks&choclate/ايس كريم ايسبرج شوكولاتة مكيكون 130 جم.webp" alt="">
-                                <p>ايس كريم ايسبرج شوكولاتة مكيكون 130 جم</p>
-                                <h5>5.00$</h5>
-                            </a>
-                            <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                        </div>
-
-                        <div  class="proud" data-name="توداي شوكولاتة الحليب مع التوت البري بدون سكر مضاف 65 جرام" data-price="5.00">
-                            <a href="#"><img src="./img/snaks&choclate/توداي شوكولاتة الحليب مع التوت البري بدون سكر مضاف 65 جرام.webp" alt="">
-                                <p>توداي شوكولاتة الحليب مع التوت البري بدون سكر مضاف 65 جرام</p>
-                                <h5>5.00$</h5>
-                            </a>
-                            <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                        </div>
-
-                        <div class="proud" data-name="توداي شوكولاتة بالحليب بالفستق بدون سكر مضاف 65 جرام" data-price="5.00">
-                            <a href="#"><img src="./img/snaks&choclate/توداي شوكولاتة بالحليب بالفستق بدون سكر مضاف 65 جرام.webp" alt="">
-                                <p>توداي شوكولاتة بالحليب بالفستق بدون سكر مضاف 65 جرام</p>
-                                <h5>5.00$</h5>
-                            </a>
-                            <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                        </div>
-
-                        <div class="proud" data-name="توداي شوكولاتة للحلويات 250 جم" data-price="5.00">
-                            <a href="#"><img src="./img/snaks&choclate/توداي شوكولاتة للحلويات 250 جم.webp" alt="">
-                                <p>توداي شوكولاتة للحلويات 250 جم</p>
-                                <h5>5.00$</h5>
-                            </a>
-                            <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                        </div>
-
-                        <div class="proud" data-name="تودي شوكولاتة الحليب بالتوت الأزرق بدون إضافة سكر 65 جرام" data-price="5.00">
-                            <a href="#"><img src="./img/snaks&choclate/تودي شوكولاتة الحليب بالتوت الأزرق بدون إضافة سكر 65 جرام.webp" alt="">
-                                <p>تودي شوكولاتة الحليب بالتوت الأزرق بدون إضافة سكر 65 جرام</p>
-                                <h5>5.00$</h5>
-                            </a>
-                            <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                        </div>
-
-                        <div class="proud" data-name="جبري آيس كريم جانجل بنكهة الشوكولاتة 52 جرام" data-price="5.00">
-                            <a href="#"><img src="./img/snaks&choclate/جبري ﻿آيس كريم جانجل بنكهة الشوكولاتة 52 جرام.webp" alt="">
-                                <p>جبري آيس كريم جانجل بنكهة الشوكولاتة 52 جرام</p>
-                                <h5>5.00$</h5>
-                            </a>
-                            <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                        </div>
-
-                        <div class="proud" data-name="جبري آيس كريم سبرينج بنكهة الفانيليا 50 جم" data-price="5.00">
-                            <a href="#"><img src="./img/snaks&choclate/جبري ﻿آيس كريم سبرينج بنكهة الفانيليا 50 جم.webp" alt="">
-                                <p>جبري آيس كريم سبرينج بنكهة الفانيليا 50 جم</p>
-                                <h5>5.00$</h5>
-                            </a>
-                            <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                        </div>
-                        <div class="proud" data-name="بلدنا حليب بنكهة الموز 250 مل" data-price="5.00">
-                                <a href="#"><img src="./img/milk/بلدنا حليب بنكهة الموز 250 مل.webp" alt="">
-                                    <p>بلدنا حليب بنكهة الموز 250 مل</p>
-                                    <h5>5.00$</h5>
-                                </a>
-                                <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                            </div>
-                            -->
+                    
                 </div>
 
 
@@ -728,214 +196,13 @@
 
                             <div class="Category-Container" data-category="Dairy & Eggs" id="nine">
 
-                                <!--
-                        <div id="nine" class="proud" data-name="بلدنا حليب قليل الدسم طويل الأجل 1 لتر" data-price="5.00">
-                            <a href="#"><img src="./img/milk/بلدنا حليب قليل الدسم طويل الأجل 1 لتر.webp" alt="">
-                                <p>بلدنا حليب قليل الدسم طويل الأجل 1 لتر</p>
-                                <h5>5.00$</h5>
-                            </a>
-                            <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                        </div>
-                        <div class="proud" data-name="بلدنا حليب كامل الدسم 1 لتر" data-price="5.00">
-                            <a href="#"><img src="./img/milk/بلدنا حليب كامل الدسم 1 لتر.avif" alt="">
-                                <p>بلدنا حليب كامل الدسم 1 لتر</p>
-                                <h5>5.00$</h5>
-                            </a>
-                            <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                        </div>
-                        <div class="proud" data-name="جميد سائل 1000مل" data-price="5.00">
-                            <a href="#"><img src="./img/milk/جميد سائل 1000مل.png" alt="">
-                                <p>جميد سائل 1000مل</p>
-                                <h5>5.00$</h5>
-                            </a>
-                            <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                        </div>
-                        <div class="proud" data-name="حليب 1 لتر" data-price="5.00">
-                            <a href="#"><img src="./img/milk/حليب 1 لتر.png" alt="">
-                                <p>حليب 1 لتر</p>
-                                <h5>5.00$</h5>
-                            </a>
-                            <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                        </div>
-                        <div class="proud" data-name="حليب المراعي كامل الدسم" data-price="5.00">
-                            <a href="#"><img src="./img/milk/حليب المراعي كامل الدسم.webp" alt="">
-                                <p>حليب المراعي كامل الدسم</p>
-                                <h5>5.00$</h5>
-                            </a>
-                            <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                        </div>
-                        <div class="proud" data-name="حليب بلدنا شوكولاتة 250 مل" data-price="5.00">
-                            <a href="#"><img src="./img/milk/حليب بلدنا شوكولاتة 250 مل.webp" alt="">
-                                <p>حليب بلدنا شوكولاتة 250 مل</p>
-                                <h5>5.00$</h5>
-                            </a>
-                            <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                        </div>
-                        <div class="proud" data-name="حليب بلدنا فراولة 250 مل" data-price="5.00">
-                            <a href="#"><img src="./img/milk/حليب بلدنا فراولة 250 مل.webp" alt="">
-                                <p>حليب بلدنا فراولة 250 مل</p>
-                                <h5>5.00$</h5>
-                            </a>
-                            <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                        </div>
-                        <div class="proud" data-name="زبادي المها 200 غم" data-price="5.00">
-                            <a href="#"><img src="./img/milk/زبادي المها 200 غم.png" alt="">
-                                <p>زبادي المها 200 غم</p>
-                                <h5>5.00$</h5>
-                            </a>
-                            <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                        </div>
-                        <div class="proud" data-name="شنينه 1 لتر" data-price="5.00">
-                            <a href="#"><img src="./img/milk/شنينه 1 لتر.png" alt="">
-                                <p>شنينه 1 لتر</p>
-                                <h5>5.00$</h5>
-                            </a>
-                            <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                        </div>
-                        <div class="proud" data-name="شنينه 250 مل" data-price="5.00">
-                            <a href="#"><img src="./img/milk/شنينه 250 مل.png" alt="">
-                                <p>شنينه 250 مل</p>
-                                <h5>5.00$</h5>
-                            </a>
-                            <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                        </div>
-                        <div class="proud" data-name="لبن المها 150 غم" data-price="5.00">
-                            <a href="#"><img src="./img/milk/لبن المها 150 غم.png" alt="">
-                                <p>لبن المها 150 غم</p>
-                                <h5>5.00$</h5>
-                            </a>
-                            <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                        </div>
-                        <div class="proud" data-name="لبن المها 200 غم" data-price="5.00">
-                            <a href="#"><img src="./img/milk/لبن المها 200 غم.png" alt="">
-                                <p>لبن المها 200 غم</p>
-                                <h5>5.00$</h5>
-                            </a>
-                            <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                        </div>
-                        <div class="proud" data-name="لبن المها 1000 غم" data-price="5.00">
-                            <a href="#"><img src="./img/milk/لبن المها 1000 غم.png" alt="">
-                                <p>لبن المها 1000 غم</p>
-                                <h5>5.00$</h5>
-                            </a>
-                            <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                        </div>
-                        <div class="proud" data-name="لبن المها 1800 غم" data-price="5.00">
-                            <a href="#"><img src="./img/milk/لبن المها 1800 غم.png" alt="">
-                                <p>لبن المها 1800 غم</p>
-                                <h5>5.00$</h5>
-                            </a>
-                            <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                        </div>
-                        <div class="proud" data-name="لبن المها 1800 غم" data-price="5.00">
-                            <a href="#"><img src="./img/milk/حمودة حليب كامل الدسم طويل الأجل 1 لتر.webp" alt="">
-                                <p>لبن المها 1800 غم</p>
-                                <h5>5.00$</h5>
-                            </a>
-                            <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                        </div>
-                        -->
+                               
                 </div>
 
 
                 <!--Disposables-->
                 <div class="Category-Container" data-category="Disposabels" id="eighth">
-                    <!--
-                        <div id="eighth" class="proud" data-name="ار زي ملاعق شاي 100 قطعة" data-price="5.00">
-                        <a href="#"><img src="./img/disposabels/ار زي ملاعق شاي 100 قطعة.avif" alt="">
-                            <p>ار زي ملاعق شاي 100 قطعة</p>
-                            <h5>5.00$</h5>
-                        </a>
-                            <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                           </div>
-
-                    <div class="proud" data-name="أكواب ورقية إسبريسو 120 مل 50 قطعة" data-price="5.00">
-                        <a href="#"><img src="./img/disposabels/أكواب ورقية إسبريسو 120 مل 50 قطعة.webp" alt="">
-                            <p>أكواب ورقية إسبريسو 120 مل 50 قطعة</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="باجي أكياس قمامة 18 كيس صغير 62x52 سم" data-price="5.00">
-                        <a href="#"><img src="./img/disposabels/باجي أكياس قمامة 18 كيس صغير 62x52 سم.webp" alt="">
-                            <p>باجي أكياس قمامة 18 كيس صغير 62x52 سم</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="باجي مفارش سفرة 44 قطعة 90 × 90 سم" data-price="5.00">
-                        <a href="#"><img src="./img/disposabels/باجي مفارش سفرة 44 قطعة 90 × 90 سم.webp" alt="">
-                            <p>باجي مفارش سفرة 44 قطعة 90 × 90 سم</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="حبل قماش أمامي من فيرست لتجفيف الملابس، حبل قطن نايلون، 10 متر، عبوة من 4 قطع (متعددة الألوان)" data-price="5.00">
-                        <a href="#"><img src="./img/disposabels/حبل قماش أمامي من فيرست لتجفيف الملابس، حبل قطن نايلون، 10 متر، عبوة من 4 قطع (متعددة الألوان).webp" alt="">
-                            <p>حبل قماش أمامي من فيرست لتجفيف الملابس، حبل قطن نايلون، 10 متر، عبوة من 4 قطع (متعددة الألوان)</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="حطاب ملعقة بلاستيك 25 قطعة" data-price="5.00">
-                        <a href="#"><img src="./img/disposabels/حطاب ملعقة بلاستيك 25 قطعة.jpg" alt="">
-                            <p>حطاب ملعقة بلاستيك 25 قطعة</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="سمايل كار 100 منديل  6" data-price="5.00">
-                        <a href="#"><img src="./img/disposabels/سمايل كار 100 منديل  6.webp" alt="">
-                            <p>سمايل كار 100 منديل  6</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="قفاز بلاستيك 100 حبة" data-price="5.00">
-                        <a href="#"><img src="./img/disposabels/قفاز بلاستيك 100 حبة.webp" alt="">
-                            <p>قفاز بلاستيك 100 حبة</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="كمامات أزرق 50 حبة" data-price="5.00">
-                        <a href="#"><img src="./img/disposabels/كمامات أزرق 50 حبة.webp" alt="">
-                            <p>كمامات أزرق 50 حبة</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="نايلون رول تغليف طعام 15 × 50 سم" data-price="5.00">
-                        <a href="#"><img src="./img/disposabels/نايلون رول تغليف طعام 15 × 50 سم.webp" alt="">
-                            <p>نايلون رول تغليف طعام 15 × 50 سم</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="ورق قصدير مارينا للشيشة 20 قطعة" data-price="5.00">
-                        <a href="#"><img src="./img/disposabels/ورق قصدير مارينا للشيشة 20 قطعة.webp" alt="">
-                            <p>ورق قصدير مارينا للشيشة 20 قطعة</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-                    <div class="proud" data-name="ورق قصدير مارينا للشيشة 20 قطعة" data-price="5.00">
-                        <a href="#"><img src="./img/disposabels/قفازات 100 قفاز.webp" alt="">
-                            <p>ورق قصدير مارينا للشيشة 20 قطعة</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-                    -->
+                  
                 </div>
 
 
@@ -944,134 +211,7 @@
                      
                  
                          <div class="Category-Container" data-category="Cleaning & Laundry" id="six">
-                            <!--
-                    <div id="six" class="proud" data-name="Loyal Fabric Softener & Freshener Soft Pink 3 Liters" data-price="5.00">
-                    <a href="#"><img src="./img/clean/Loyal Fabric Softener & Freshener Soft Pink 3 Liters.webp" alt="">
-                        <p>Loyal Fabric Softener & Freshener Soft Pink 3 Liters</p>
-                        <h5>5.00$</h5>
-                    </a>
-                       <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                       </div>
-                    <div class="proud" data-name="Touri Liquid Soap For Hand & Body Jewels 500ml" data-price="5.00">
-                        <a href="#"><img src="./img/clean/Touri Liquid Soap For Hand & Body Jewels 500ml.webp" alt="">
-                            <p>Touri Liquid Soap For Hand & Body Jewels 500ml</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="Touri Liquid Soap For Hand & Body More Roses 500ml" data-price="5.00">
-                        <a href="#"><img src="./img/clean/Touri Liquid Soap For Hand & Body More Roses 500ml.webp" alt="">
-                            <p>Touri Liquid Soap For Hand & Body More Roses 500ml</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="Touri Liquid Soap For Hand & Body Peach & Peach 400ml" data-price="5.00">
-                        <a href="#"><img src="./img/clean/Touri Liquid Soap For Hand & Body Peach & Peach 400ml.webp" alt="">
-                            <p>Touri Liquid Soap For Hand & Body Peach & Peach 400ml</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="Touri Liquid Soap For Hand & Body Purple Love 400ml" data-price="5.00">
-                        <a href="#"><img src="./img/clean/Touri Liquid Soap For Hand & Body Purple Love 400ml.webp" alt="">
-                            <p>Touri Liquid Soap For Hand & Body Purple Love 400ml</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="توري باور جل التنظيف البارد الأوتوماتيكي 3 لتر" data-price="5.00">
-                        <a href="#"><img src="./img/clean/توري باور جل التنظيف البارد الأوتوماتيكي 3 لتر.webp" alt="">
-                            <p>توري باور جل التنظيف البارد الأوتوماتيكي 3 لتر</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="توري كواترو 2 كيلو" data-price="5.00">
-                        <a href="#"><img src="./img/clean/توري كواترو 2 كيلو.webp" alt="">
-                            <p>توري كواترو 2 كيلو</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="توري كواترو 2.5 كيلو" data-price="5.00">
-                        <a href="#"><img src="./img/clean/توري كواترو 2.5 كيلو.webp" alt="">
-                            <p>توري كواترو 2.5 كيلو</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="توري كواترو 400 جرام" data-price="5.00">
-                        <a href="#"><img src="./img/clean/توري كواترو 400 جرام.avif" alt="">
-                            <p>توري كواترو 400 جرام</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="توري منعم الأقمشة بالربيع المنعش 750 مل" data-price="5.00">
-                        <a href="#"><img src="./img/clean/توري منعم الأقمشة بالربيع المنعش 750 مل.webp" alt="">
-                            <p>توري منعم الأقمشة بالربيع المنعش 750 مل</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="وايبكس - اسفنجة لحفظ الأظافر - 2+1 مجاناً" data-price="5.00">
-                        <a href="#"><img src="./img/clean/وايبكس - اسفنجة لحفظ الأظافر - 2+1 مجاناً.webp" alt="">
-                            <p>وايبكس - اسفنجة لحفظ الأظافر - 2+1 مجاناً</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="لويال معقم و مطهر 750 مل" data-price="5.00">
-                        <a href="#"><img src="./img/clean/لويال معقم و مطهر 750 مل.webp" alt="">
-                            <p>لويال معقم و مطهر 750 مل</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="عصا قشاطة  مكنسة" data-price="5.00">
-                        <a href="#"><img src="./img/clean/عصا قشاطة  مكنسة.webp" alt="">
-                            <p>عصا قشاطة  مكنسة</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="صابون سائل هايجين 3  500 مل" data-price="5.00">
-                        <a href="#"><img src="./img/clean/صابون سائل هايجين 3  500 مل.jpg" alt="">
-                            <p>صابون سائل هايجين 3  500 مل</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="سائل غسيل الصحون بالليمون والصنوبر 2 لتر" data-price="5.00">
-                        <a href="#"><img src="./img/clean/سائل غسيل الصحون بالليمون والصنوبر 2 لتر.webp" alt="">
-                            <p>سائل غسيل الصحون بالليمون والصنوبر 2 لتر</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="وري منعم الأقمشة - زهور أنطاليا 750 مل" data-price="5.00">
-                        <a href="#"><img src="./img/clean/وري منعم الأقمشة - زهور أنطاليا 750 مل.webp" alt="">
-                            <p>وري منعم الأقمشة - زهور أنطاليا 750 مل</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-                -->
+                          
                          </div>
 
 
@@ -1080,307 +220,21 @@
 
                 <!--Bakery-->
                 <div class="Category-Container" data-category="Bakery" id="ten">
-                    <!--
-                    <div id="ten" class="proud" data-name="وري منعم الأقمشة - زهور أنطاليا 750 مل" data-price="5.00">
-                        <a href="#"><img src="./img/bakery/ريف خبز بذور الكتان 250 جرام.webp" alt="">
-                            <p>ريف خبز بذور الكتان 250 جرام</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-                    <div class="proud" data-name="وري منعم الأقمشة - زهور أنطاليا 750 مل" data-price="5.00">
-                        <a href="#"><img src="./img/bakery/ريف خبز بني 510 جرام.webp" alt="">
-                            <p>ريف خبز بني 510 جرام</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-                    <div class="proud" data-name="وري منعم الأقمشة - زهور أنطاليا 750 مل" data-price="5.00">
-                        <a href="#"><img src="./img/bakery/ريفي خبز دايت عالي الألياف 6 قطع.webp" alt="">
-                            <p>ريفي خبز دايت عالي الألياف 6 قطع</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-                    <div class="proud" data-name="وري منعم الأقمشة - زهور أنطاليا 750 مل" data-price="5.00">
-                        <a href="#"><img src="./img/bakery/فورنجي خبز طازج 1 كيلو.webp" alt="">
-                            <p>فورنجي خبز طازج 1 كيلو</p>
-                            <h5>5.00$</h5>
-                        </a>
-                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-                    -->
+                 
                 </div>
 
 
 
                     <!--Coffee and Tea-->
                     <div class="Category-Container"  data-category="Coffe & Tea" id="cof">
-                        <!--
-                    <div id="cof" class="proud" data-name="السمّان قهوة خليجية - قهوة محمصة مطحونة بالهيل والزعفران 450غ" data-price="5.00">
-                    <a href="#"><img src="./img/tea&coffe/السمّان قهوة خليجية - قهوة محمصة مطحونة بالهيل والزعفران 450غ.webp" alt="">
-                    <p>السمّان قهوة خليجية - قهوة محمصة مطحونة بالهيل والزعفران 450غ</p>
-                    <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="العطار بابونج 20 كيس" data-price="5.00">
-                    <a href="#"><img src="./img/tea&coffe/العطار بابونج 20 كيس.webp" alt="">
-                    <p>العطار بابونج 20 كيس</p>
-                    <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="العطار زنجبيل و ليمون 20 كيس" data-price="5.00">
-                    <a href="#"><img src="./img/tea&coffe/العطار زنجبيل و ليمون 20 كيس.webp" alt="">
-                    <p>العطار زنجبيل و ليمون 20 كيس</p>
-                    <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="العميد وسط بدون هيل 250 جرام" data-price="5.00">
-                    <a href="#"><img src="./img/tea&coffe/العميد وسط بدون هيل 250 جرام.webp" alt="">
-                    <p>العميد وسط بدون هيل 250 جرام</p>
-                    <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="بن العميد قهوة امريكية 100٪ ارابيكا 420 جم" data-price="5.00">
-                    <a href="#"><img src="./img/tea&coffe/بن العميد قهوة امريكية 100٪ ارابيكا 420 جم.webp" alt="">
-                    <p>بن العميد قهوة امريكية 100٪ ارابيكا 420 جم</p>
-                    <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="العميد قهوة سريعة التحضير 2 في 1 كلاسيك 14.5 جرام  12 قطعة" data-price="5.00">
-                    <a href="#"><img src="./img/tea&coffe/العميد قهوة سريعة التحضير 2 في 1 كلاسيك 14.5 جرام  12 قطعة.webp" alt="">
-                    <p>العميد قهوة سريعة التحضير 2 في 1 كلاسيك 14.5 جرام  12 قطعة</p>
-                    <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="شاي الغزالين حلل شاي سيلاني نقي 250 جرام" data-price="5.00">
-                    <a href="#"><img src="./img/tea&coffe/شاي الغزالين حلل شاي سيلاني نقي 250 جرام.webp" alt="">
-                    <p>شاي الغزالين حلل شاي سيلاني نقي 250 جرام</p>
-                    <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="قهوة العميد غامق بالهيل 250 غ" data-price="5.00">
-                    <a href="#"><img src="./img/tea&coffe/قهوة العميد غامق بالهيل 250 غ.webp" alt="">
-                    <p>قهوة العميد غامق بالهيل 250 غ</p>
-                    <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="قهوة الغزالين الذهبية سريعة التحضير 100 جرام" data-price="5.00">
-                    <a href="#"><img src="./img/tea&coffe/قهوة الغزالين الذهبية سريعة التحضير 100 جرام.webp" alt="">
-                    <p>قهوة الغزالين الذهبية سريعة التحضير 100 جرام</p>
-                    <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="قهوة تركية العميد داكنة بدون هيل 250 جرام" data-price="5.00">
-                    <a href="#"><img src="./img/tea&coffe/قهوة تركية العميد داكنة بدون هيل 250 جرام.webp" alt="">
-                    <p>قهوة تركية العميد داكنة بدون هيل 250 جرام</p>
-                    <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="مسحوق الكاكاو - الكسيح 200 جرام" data-price="5.00">
-                    <a href="#"><img src="./img/tea&coffe/مسحوق الكاكاو - الكسيح 200 جرام.webp" alt="">
-                    <p>مسحوق الكاكاو - الكسيح 200 جرام</p>
-                    <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="معروف قهوة فرنسية بالبندق 250 جرام" data-price="5.00">
-                    <a href="#"><img src="./img/tea&coffe/معروف قهوة فرنسية بالبندق 250 جرام.webp" alt="">
-                    <p>معروف قهوة فرنسية بالبندق 250 جرام</p>
-                    <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="معروف قهوة لبنانية خلطة أصلية 250 جرام" data-price="5.00">
-                    <a href="#"><img src="./img/tea&coffe/معروف قهوة لبنانية خلطة أصلية 250 جرام.webp" alt="">
-                    <p>معروف قهوة لبنانية خلطة أصلية 250 جرام</p>
-                    <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="معروف قهوة تركية بدون هيل 250 جرام" data-price="5.00">
-                    <a href="#"><img src="./img/tea&coffe/العطار زعتر بري 20 كيس.webp" alt="">
-                    <p>العطار زعتر بري 20 كيس</p>
-                    <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-                    <div class="proud" data-name="معروف قهوة تركية بدون هيل 250 جرام" data-price="5.00">
-                    <a href="#"><img src="./img/tea&coffe/معروف قهوة تركية بدون هيل 250 جرام.webp" alt="">
-                    <p>معروف قهوة تركية بدون هيل 250 جرام</p>
-                    <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-                    <div class="proud" data-name="معروف قهوة تركية بدون هيل 250 جرام" data-price="5.00">
-                    <a href="#"><img src="./img/tea&coffe/العطار زنجبيل وليمون 20 كيس.webp" alt="">
-                    <p>العطار مرامية 20 كيس</p>
-                    <h5>5.00$</h5></a><i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-                    -->
+                      
                     </div>
 
 
                     <!--Drinks -->
 
                        <div class="Category-Container" data-category="Drinks" id="dinks">
-                        <!---
-                    <div id="dinks" class="proud" data-name="أبو راشد مياه 12600 مل" data-price="5.00"> 
-                    <a href="#"><img src="img/drinks/أبو راشد مياه 12600 مل.webp" alt="">
-                        <p>أبو راشد مياه 12600 مل</p>
-                        <h5>5.00$</h5>
-                    </a>
-                    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="الزهراء قارورة ماء للكولر 10 لتر" data-price="5.00">
-                    <a href="#"><img src="img/drinks/الزهراء قارورة ماء للكولر 10 لتر.webp" alt="">
-                        <p>الزهراء قارورة ماء للكولر 10 لتر</p>
-                        <h5>5.00$</h5>
-                    </a>
-                    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="ايس بديل الماء عنب توت بري 502 مل" data-price="5.00">
-                    <a href="#"><img src="img/drinks/ايس بديل الماء عنب توت بري 502 مل.webp" alt="">
-                        <p>ايس بديل الماء عنب توت بري 502 مل</p>
-                        <h5>5.00$</h5>
-                    </a>
-                    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="ثلج 1 كيلو" data-price="5.00">
-                    <a href="#"><img src="img/drinks/ثلج 1 كيلو.webp" alt="">
-                        <p>ثلج 1 كيلو</p>
-                        <h5>5.00$</h5>
-                    </a>
-                    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="زاكى عصير فواكه مشكلة 200 مل" data-price="5.00">
-                    <a href="#"><img src="img/drinks/زاكى عصير فواكه مشكلة 200 مل.webp" alt="">
-                        <p>زاكى عصير فواكه مشكلة 200 مل</p>
-                        <h5>5.00$</h5>
-                    </a>
-                    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="سما مشروب غازي ليمون زيرو 250 مل" data-price="5.00">
-                    <a href="#"><img src="img/drinks/سما مشروب غازي ليمون زيرو 250 مل.webp" alt="">
-                        <p>سما مشروب غازي ليمون زيرو 250 مل</p>
-                        <h5>5.00$</h5>
-                    </a>
-                    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="سوبر توتي فروتي مشروب غازي 250 مل" data-price="5.00">
-                    <a href="#"><img src="img/drinks/سوبر توتي فروتي مشروب غازي 250 مل.webp" alt="">
-                        <p>سوبر توتي فروتي مشروب غازي 250 مل</p>
-                        <h5>5.00$</h5>
-                    </a>
-                    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="سوبر مشروب غازي بالرمان 250 مل" data-price="5.00">
-                    <a href="#"><img src="img/drinks/سوبر مشروب غازي بالرمان 250 مل.webp" alt="">
-                        <p>سوبر مشروب غازي بالرمان 250 مل</p>
-                        <h5>5.00$</h5>
-                    </a>
-                    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="سوبر مشروب غازي ليمون 250 مل" data-price="5.00">
-                    <a href="#"><img src="img/drinks/سوبر مشروب غازي ليمون 250 مل.webp" alt="">
-                        <p>سوبر مشروب غازي ليمون 250 مل</p>
-                        <h5>5.00$</h5>
-                    </a>
-                    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="سوبر موهيتو مشروب غازي بدون سكر 250 مل" data-price="5.00">
-                    <a href="#"><img src="img/drinks/سوبر موهيتو مشروب غازي بدون سكر 250 مل.webp" alt="">
-                        <p>سوبر موهيتو مشروب غازي بدون سكر 250 مل</p>
-                        <h5>5.00$</h5>
-                    </a>
-                    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="عصير زاكي بنكهة الفراولة 200 مل" data-price="5.00">
-                    <a href="#"><img src="img/drinks/عصير زاكي بنكهة الفراولة 200 مل.webp" alt="">
-                        <p>عصير زاكي بنكهة الفراولة 200 مل</p>
-                        <h5>5.00$</h5>
-                    </a>
-                    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="فيفيان كوب ماء 250 مل × 40 حبة" data-price="5.00">
-                    <a href="#"><img src="img/drinks/فيفيان كوب ماء 250 مل × 40 حبة.webp" alt="">
-                        <p>فيفيان كوب ماء 250 مل × 40 حبة</p>
-                        <h5>5.00$</h5>
-                    </a>
-                    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="ماء فوار بالخوخ نكتارين 502.8 مل" data-price="5.00">
-                    <a href="#"><img src="img/drinks/ماء فوار بالخوخ نكتارين 502.8 مل.webp" alt="">
-                        <p>ماء فوار بالخوخ نكتارين 502.8 مل</p>
-                        <h5>5.00$</h5>
-                    </a>
-                    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="ماء فوار بجوز الهند والأناناس 502.8 مل" data-price="5.00">
-                    <a href="#"><img src="img/drinks/ماء فوار بجوز الهند والأناناس 502.8 مل.webp" alt="">
-                        <p>ماء فوار بجوز الهند والأناناس 502.8 مل</p>
-                        <h5>5.00$</h5>
-                    </a>
-                    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="ماتريكس اب مشروب غازي 250 مل" data-price="5.00">
-                    <a href="#"><img src="img/drinks/ماتريكس اب مشروب غازي 250 مل.webp" alt="">
-                        <p>ماتريكس اب مشروب غازي 250 مل</p>
-                        <h5>5.00$</h5>
-                    </a>
-                    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="ماتريكس فواكة غازية 250 مل" data-price="5.00">
-                    <a href="#"><img src="img/drinks/ماتريكس فواكة غازية 250 مل.webp" alt="">
-                        <p>ماتريكس فواكة غازية 250 مل</p>
-                        <h5>5.00$</h5>
-                    </a>
-                    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="ماتريكس مشروب غازي بالليمون 250 مل" data-price="5.00">
-                    <a href="#"><img src="img/drinks/ماتريكس مشروب غازي بالليمون 250 مل.webp" alt="">
-                        <p>ماتريكس مشروب غازي بالليمون 250 مل</p>
-                        <h5>5.00$</h5>
-                    </a>
-                    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="ماتريكس مشروب غازي برتقال ​​250 مل" data-price="5.00">
-                    <a href="#"><img src="img/drinks/ماتريكس مشروب غازي برتقال ​​250 مل.webp" alt="">
-                        <p>ماتريكس مشروب غازي برتقال ​​250 مل</p>
-                        <h5>5.00$</h5>
-                    </a>
-                    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="مياه غازية مثلجة بالليمون واللايم 502.8 مل" data-price="5.00">
-                    <a href="#"><img src="img/drinks/مياه غازية مثلجة بالليمون واللايم 502.8 مل.webp" alt="">
-                        <p>مياه غازية مثلجة بالليمون واللايم 502.8 مل</p>
-                        <h5>5.00$</h5>
-                    </a>
-                    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-
-                    <div class="proud" data-name="مياه غازية منكهة بطعم الفراولة مع الليمون المثلج 502.8 مل" data-price="5.00">
-                    <a href="#"><img src="img/drinks/مياه غازية منكهة بطعم الفراولة مع الليمون المثلج 502.8 مل.webp" alt="">
-                        <p>مياه غازية منكهة بطعم الفراولة مع الليمون المثلج 502.8 مل</p>
-                        <h5>5.00$</h5>
-                    </a>
-                    <i class="fa-solid fa-cart-plus add-to-cart"></i>
-                    </div>
-                   -->
-
-     
-                </div>
+                          </div>
  </div>
 
 
@@ -1400,38 +254,44 @@
 
     
       
-        <!-- Popup overlay and form -->
-        <div id="overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:10;"></div>
-        <div id="popup" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:#fff; padding:20px; border:2px solid #444; z-index:11;">
+         <div id="overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0
+     ,0.5); z-index:10;"></div>
+        <div id="popup" style=" position:fixed; top:50%; left:50%; transform:translate(-50%,-50%);  padding:20px;  z-index:1000; display: none;" >
 
-         <h2 style="margin-bottom: 10px;text-align: center;">Checkout Form</h2>
+         <h2 style="margin-bottom: 40px;text-align: center;">Checkout</h2>
+      
+         <!--  <label for="">FirstName</label>-->
+         <input  type="text" id="FirstName" placeholder="FirstName" >
+         <br>
 
+        <!--- <label for="">LastName</label>-->
 
-        <label>FirstName : <input style="margin-left: 24px;" type="text" id="FirstName"></label>
-        <label>LastName : <input style="margin-left: 24px;" type="text" id="LastName"></label>
+        <input s type="text" id="LastName" placeholder="LastName" >
 
-                <br><br>
-
-         <label>Country : <input style="margin-left: 26px;" type="text" id="Country"></label>
-        <label>City: <input style="margin-left: 10px;" type="text" id="City"></label><br>
-
+           
+                <br>
+                <br>
+        <input  type="text" id="Country" placeholder="Country">
+        <br>
+        <input  type="text" id="City" placeholder="City"><br>
+<br>
             
-     <label>StreetAddress : <input style="margin-left: 26px;" type="Text" id="StreetAddress"></label>
-     <label>PhoneNumber: <input style="margin-left: 10px;" type="number" id="PhoneNumber"></label>
+     <input  type="Text" id="StreetAddress" placeholder="StreetAddress">
+     <br>
+      <input  type="number" id="PhoneNumber" placeholder="PhoneNumber">
 
      <br>
             
 
 
-     <p style="text-align: center;"><strong>Total : </strong> <span id="popupTotal">$0</span></p>
+     <p style="text-align: center;"><strong>Total : </strong> <span id="popupTotal">0 JOD</span></p>
 
                 <button class="submitOrder" onclick="submitOrder()">Place order</button>
+                <br>
                 <button class="closeOrder" onclick="closeOrder()">Close</button>
 
         </div>
 
-
-      
 
 </body>
 

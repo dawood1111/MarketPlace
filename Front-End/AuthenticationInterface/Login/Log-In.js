@@ -1,3 +1,15 @@
+function SetError(message){
+
+    const errorDisplay = document.querySelector('.error');
+
+    errorDisplay.innerHTML = message;
+
+
+}
+
+
+
+
 document.querySelector(".LogIn-Form").addEventListener("submit",async (e)=>{
 
     e.preventDefault();
@@ -31,13 +43,14 @@ localStorage.setItem("role",role);
 if(role==="Admin"){
     window.location.href="http://127.0.0.1:5500/api/Front-End/AdminPage/AdmimPage.html"
 }else if(role==="User"){
-    window.location.href="http://127.0.0.1:5500/api/Front-End/MainPage.html"
+    window.location.href="http://127.0.0.1:5500/api/Front-End/MainPage/MainPage.html"
 }else{
 throw new Error("Unknown Role")
 }
  
 }else{
-        console.log("Email or/and password wrong")
+
+            SetError('Invalid email/Password');
     }
 
 
