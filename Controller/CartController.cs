@@ -23,19 +23,30 @@ namespace api.Controller
             _user=user;
             _cart=cart;
         }
+
+
         [HttpGet("GetById")]
         public async Task<IActionResult> GetId([FromRoute] int id){
-           var id11=await _cart.GetIdAsync(id);
-           if(id11==null){
+           var FindId=await _cart.GetIdAsync(id);
+
+           if(FindId==null){
+
             return NotFound();
+            
            }
-            return Ok(id11) ;
+            return Ok(FindId) ;
         }
+
+
         [HttpGet("GetAll")]
-        public async Task<IActionResult> GetAll(){       
+        public async Task<IActionResult> GetAll(){    
+
                 var GetEmail=User.GetEmail();
+
                 var FindByEmail=await _user.FindByEmailAsync(GetEmail);
-                var GetAll=await _context.Carts.Include(c=>c.cartitem).Where(c=>c.UserId==FindByEmail.Id).ToListAsync();
+
+                 var GetAll=await _cart.GetAllAsync(FindByEmail.Id);
+
                 return Ok(GetAll);
 
 

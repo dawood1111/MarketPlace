@@ -24,39 +24,48 @@ namespace api.Controller
             _user=user;
             _cartItem=cartItem;
         }
-        [HttpGet("GetAll")]
        
         [HttpGet("Id")]
         public async Task<IActionResult> GetId([FromRoute] int id){
             return Ok(await _cartItem.GetIdAsync(id)) ;
         }
+
+
          [HttpPost("AddCartItem")]
-         public async Task<IActionResult> Create([FromBody] CartItemDto cartItemDto,String ProductName){
-             var user=User.GetEmail();
+         public async Task<IActionResult> Create([FromBody] List<CartItemDto> cartItemDto){
+           var user=User.GetEmail();
+
           var FindEmail=  await _user.FindByEmailAsync(user);
+
           if(FindEmail==null){ return NotFound("email not found");} 
 
-            var FindProductName=await _context.Products.FirstOrDefaultAsync(p=>p.Name==ProductName);
 
-            if(FindProductName==null)return NotFound("product not found");
 
-          var cart = await _context.Carts
-        .FirstOrDefaultAsync(c => c.UserId == FindEmail.Id);
-              decimal price=FindProductName.Price;
-              int ProductId=FindProductName.Id;
-
-              
-              
-              
-              
-
-            var CartItemModel=cartItemDto.ToCartItem(price,ProductId,FindProductName.Name,FindEmail.Id);
-             CartItemModel.CartId=cart.Id;
+                     var cart = await _context.Carts
+            .FirstOrDefaultAsync(c => c.UserId == FindEmail.Id); 
         
-            await _cartItem.CareteCartItem(CartItemModel);
+              foreach(var item in  cartItemDto){
+                var product=await _context.Products.FirstOrDefaultAsync(p=>p.Name==item.ProductName);
+                var cartItem =new CartItem{
+
+                    ProductName=product.Name,
+                    Quantity=item.Quantity,
+                    Price=product.Price??0,
+                    ProductId=product.Id,
+                    CartId=cart.Id,
+                    UserId=FindEmail.Id
+
+                    
+
+                };
+               await _context.CartItems.AddAsync(cartItem);
+              }
+              await _context.SaveChangesAsync();
+              
+            
              
 
-              return CreatedAtAction(nameof(GetId),new{id=CartItemModel.CartId,CartItemModel});
+                   return Ok(new { message = "Items added to cart successfully" }); 
         }
        
        

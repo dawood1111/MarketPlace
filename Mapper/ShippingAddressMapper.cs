@@ -10,7 +10,8 @@ namespace api.Mapper
                  FirstName=shippingAddressDto.FirstName,
                  LastName=shippingAddressDto.LastName,  
                  Country=shippingAddressDto.Country,
-                 StreetAddress=shippingAddressDto.StreetAddress,
+                 City=shippingAddressDto.City,
+                 StreetAddress =shippingAddressDto.StreetAddress,
                  PhoneNumber=shippingAddressDto.PhoneNumber,
             };
         }

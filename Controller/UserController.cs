@@ -41,7 +41,8 @@ public async Task<IActionResult> Register([FromBody] RegisterDto registerDto)
     {
         UserName = registerDto.UserName,
         Email = registerDto.Email,
-        Role=Role
+        Role=Role,
+        CreatedAt=DateTime.UtcNow
     };
 
     // Save the user to the database
@@ -74,6 +75,7 @@ public async Task<IActionResult> Register([FromBody] RegisterDto registerDto)
          [HttpPost("Login")]
          public async Task<IActionResult> Login(LoginDto Logindto){
             if(!ModelState.IsValid)return BadRequest(ModelState);
+            
             var FindEmail=await _Users.Users
             .FirstOrDefaultAsync(s=>s.Email==Logindto.Email);
             if(FindEmail==null)return Unauthorized("Invalid Email");

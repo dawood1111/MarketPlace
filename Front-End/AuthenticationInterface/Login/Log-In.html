@@ -4,20 +4,37 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Boldonse&family=Concert+One&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="stylesheet" href="Log-In.css">
     </head>
+    <title>SignIn</title>
     <body>
         
 
         <div class="login-container">
             <div class="login-box">
-                 <h1>Sign in to Marketplace</h1>
+                <h1><i class="fas fa-store"></i> DMA-MARKET</h1>
+
 
 
 
                 <form action="" class="LogIn-Form">
-                    <input type="email" class="Email" placeholder="Email">
-                    <input type="password" class="Password" placeholder="Password">
+                    <p>Sign in</p>
+                    <div>
+                     <label for="">Email</label>
+                    <input type="email" class="Email" >
+               </div>
+
+                    <div>
+                   <label for="">Password</label>
+                    <input type="password" class="Password" >
+                <div class="error"></div>
+                    </div>
+                  
+                    
                     <button class="Submit">Login</button>
                     </form>
                    
@@ -26,7 +43,7 @@
             <div class="TextContainer">
                 <h1>Welcome back!</h1>
                 <p>Make a positive impact on the local economy. Whether you're looking for fresh fruits, vegetables, or artisanal products, you'll find everything you need here.</p>
-               <button>Register</button>
+               <button onclick="RegisterNavigator()">Register</button>
             </div>
         </div>
 

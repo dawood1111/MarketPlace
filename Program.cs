@@ -79,7 +79,7 @@ option.DefaultSignOutScheme=JwtBearerDefaults.AuthenticationScheme;
 
 #pragma warning disable CS8604 // Possible null reference argument.
 option.TokenValidationParameters=new TokenValidationParameters{
- ValidateLifetime = true,
+ValidateLifetime = true,
 ValidateIssuer=true,
 ValidIssuer=builder.Configuration["JWT:Issuer"],
 ValidateAudience=true,
@@ -96,6 +96,7 @@ builder.Services.AddScoped<ITokenService,TokenServices>();
 builder.Services.AddScoped<ICartItem,CartItemRepos>();
 builder.Services.AddScoped<ICart,CartRepo>();
 builder.Services.AddScoped<IAdmin,AdminUser>();
+builder.Services.AddScoped<IAdminController,AdminControllerRepo>();
 
 
 builder.Services.AddCors(options =>
@@ -111,6 +112,8 @@ builder.Services.AddCors(options =>
 
 
 var app = builder.Build();
+
+app.UseStaticFiles();  
 
 
 // Configure the HTTP request pipeline.
